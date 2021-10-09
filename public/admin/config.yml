@@ -1,6 +1,11 @@
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+  accept_roles:
+    - Admin
+
+site_url: https://louiswhite.me
+display_url: https://louiswhite.me
 media_folder: public/img
 public_folder: img
 collections:
