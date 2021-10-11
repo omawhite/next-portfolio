@@ -24,6 +24,7 @@
     "@storybook/addon-links": "^6.3.10",
     "@storybook/react": "^6.3.10",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.26.1",
     "prettier": "2.4.1"
   }
