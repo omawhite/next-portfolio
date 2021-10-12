@@ -37,7 +37,8 @@ export default function Home({ allPostsData }) {
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = await getSortedPostsData();
+  console.dir(allPostsData);
   generateRSSFeed(allPostsData);
   return {
     props: {
