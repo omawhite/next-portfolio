@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src/**/*.js src/**/*.jsx",
-    "lint:fix": "npm run lint -- --fix",
+    "lint": "next lint",
     "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook"
@@ -26,9 +25,8 @@
     "@storybook/addon-essentials": "^6.3.10",
     "@storybook/addon-links": "^6.3.10",
     "@storybook/react": "^6.3.10",
-    "eslint": "^7.32.0",
+    "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-react": "^7.26.1",
     "prettier": "2.4.1"
   }
 }

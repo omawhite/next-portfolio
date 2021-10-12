@@ -1,5 +1,5 @@
-import React from 'react'
-import Layout from './layout'
+import React from 'react';
+import Layout from './layout';
 
 export default {
   component: Layout,
@@ -7,12 +7,15 @@ export default {
   argTypes: {
     home: {
       defaultValue: false,
-      control: {type: 'boolean'}
-    }
-  }
-}
+      control: { type: 'boolean' },
+    },
+  },
+};
 
-const Template = (args) =><Layout {...args}><p>This is some content</p></Layout>
+const Template = (args) => (
+  <Layout {...args}>
+    <p>This is some content</p>
+  </Layout>
+);
 
-export const Default = Template.bind()
-
+export const Default = Template.bind();
