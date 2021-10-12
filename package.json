@@ -6,6 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "eslint src/**/*.js src/**/*.jsx",
+    "lint:fix": "npm run lint -- --fix",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook"
   },
