@@ -15,6 +15,10 @@
 # production
 /build
 
+# ignore rss feed
+public/rss.xml
+public/feed.json
+
 # misc
 .DS_Store
 
