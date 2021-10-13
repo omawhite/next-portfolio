@@ -6,22 +6,32 @@ backend:
 
 site_url: https://louiswhite.me
 display_url: https://louiswhite.me
-media_folder: public/img
-public_folder: img
+media_folder: public/media
+show_preview_links: true
+public_folder: public/
 collections:
-  - name: 'pages'
-    label: 'Pages'
-    files:
-      - label: 'Home'
-        name: 'home'
-        file: 'content/home.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - label: 'Cats'
-            name: 'cats'
-            widget: list
-            fields:
-              - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Description', name: 'description', widget: 'text' }
+  - name: 'posts'
+    label: 'Posts'
+    folder: '../../posts'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          required: true,
+        }
+      - {
+          label: 'Last updated',
+          name: 'lastUpdated',
+          widget: 'datetime',
+          default: '',
+        }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'markdown',
+          required: true,
+        }
