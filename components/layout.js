@@ -6,17 +6,14 @@ import Link from 'next/link';
 import profilePic from '../images/profile.jpg';
 
 const name = 'Omar Louis White';
-export const siteTitle = `Omar's super cool site`;
+export const siteTitle = `Omar's blog`;
 
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
+        <meta name="description" content="A blog by Omar Louis White" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -53,11 +50,6 @@ export default function Layout({ children, home }) {
                 />
               </a>
             </Link>
-            {/* <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2> */}
           </>
         )}
       </header>
