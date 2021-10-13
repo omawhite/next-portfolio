@@ -14,7 +14,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>{`I'm a really cool guy.`}</p>
+        <p>{`Hi my name is Omar.`}</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -38,7 +38,7 @@ export default function Home({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData();
-  console.dir(allPostsData);
+  // console.dir(allPostsData); //uncomment if you need to debug feed generation
   generateRSSFeed(allPostsData);
   return {
     props: {

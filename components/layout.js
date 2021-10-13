@@ -1,16 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from './layout.module.css';
+import utilStyles from '../styles/utils.module.css';
+import Link from 'next/link';
+import profilePic from '../images/profile.jpg';
 
-const name = 'Omar Louis White'
-export const siteTitle = `Omar's super cool site`
-
+const name = 'Omar Louis White';
+export const siteTitle = `Omar's super cool site`;
 
 export default function Layout({ children, home }) {
-return(
-  <div className={styles.container}>
+  return (
+    <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -31,7 +31,7 @@ return(
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src={profilePic}
               className={utilStyles.borderCircle}
               height={144}
               width={144}
@@ -45,7 +45,7 @@ return(
               <a>
                 <Image
                   priority
-                  src="/images/profile.jpg"
+                  src={profilePic}
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
@@ -53,11 +53,11 @@ return(
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
+            {/* <h2 className={utilStyles.headingLg}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
-            </h2>
+            </h2> */}
           </>
         )}
       </header>
@@ -70,5 +70,5 @@ return(
         </div>
       )}
     </div>
-)
+  );
 }
