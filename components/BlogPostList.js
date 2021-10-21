@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Date from '../components/date';
 import utilStyles from '../styles/utils.module.css';
 
-export default function BlogPostsList({ postsData }) {
+export default function BlogPostsList({ postsData = [] }) {
   return (
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       <h2 className={utilStyles.headingLg}>Blog</h2>
