@@ -3,7 +3,7 @@ import Layout from './layout';
 
 export default {
   component: Layout,
-  title: 'Components/Layout',
+  title: 'Templates/Layout',
   argTypes: {
     home: {
       defaultValue: false,
