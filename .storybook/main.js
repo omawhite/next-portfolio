@@ -1,11 +1,12 @@
 module.exports = {
-  "stories": [
+  stories: [
     // Paths to the story files
-    "../components/*.stories.mdx",
-    "../components/*.stories.js",
+    '../components/*.stories.mdx',
+    '../components/*.stories.js',
   ],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials"
-  ]
-}
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    'storybook-css-modules-preset',
+  ],
+};
