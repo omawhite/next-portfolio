@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from './layout';
+import Header from './Header';
 
 export default {
-  component: Layout,
-  title: 'Templates/Layout',
+  component: Header,
+  title: 'Components/Header',
   argTypes: {
     home: {
       defaultValue: false,
@@ -12,10 +12,6 @@ export default {
   },
 };
 
-const Template = (args) => (
-  <Layout {...args}>
-    <p>This is some content</p>
-  </Layout>
-);
+const Template = (args) => <Header {...args} />;
 
 export const Default = Template.bind();

@@ -1,11 +1,9 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
-import profilePic from '../images/profile.jpg';
 
-const name = 'Omar Louis White';
+import styles from './layout.module.css';
+import Link from 'next/link';
+import Header from './Header';
+
 export const siteTitle = `Omar's blog`;
 
 export default function Layout({ children, home }) {
@@ -23,36 +21,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src={profilePic}
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src={profilePic}
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-          </>
-        )}
-      </header>
+      <Header home={home} />
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
