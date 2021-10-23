@@ -7,6 +7,7 @@ backend:
 site_url: https://louiswhite.me
 display_url: https://louiswhite.me
 media_folder: public/media
+publish_mode: editorial_workflow
 show_preview_links: true
 public_folder: public/
 collections:
@@ -29,9 +30,4 @@ collections:
           default: '',
         }
       - { label: 'Description', name: 'description', widget: 'text' }
-      - {
-          label: 'Content',
-          name: 'content',
-          widget: 'markdown',
-          required: true,
-        }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: true }
