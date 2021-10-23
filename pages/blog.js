@@ -18,6 +18,8 @@ export default function Blog({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData();
+  // console.dir(allPostsData); //uncomment if you need to debug feed generation
+  generateRSSFeed(allPostsData);
   return {
     props: {
       allPostsData,
