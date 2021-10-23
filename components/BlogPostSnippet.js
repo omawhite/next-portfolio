@@ -12,6 +12,7 @@ export default function BlogPostSnippet({ id, date, title, content }) {
       <small className={utilStyles.lightText}>
         <Date dateString={date} />
       </small>
+      <p>{content}</p>
     </li>
   );
 }
