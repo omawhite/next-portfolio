@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/Layout';
 import BioBlurb from '../components/BioBlurb';
 import { getSortedPostsData } from '../lib/posts';
-import { generateRSSFeed } from '../lib/feed';
 
 import BlogPostsList from '../components/BlogPostList';
 
