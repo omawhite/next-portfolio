@@ -4,6 +4,8 @@ import profilePic from '../images/profile.jpg';
 import Link from 'next/link';
 import styles from './Header.module.css';
 
+const name = 'Omar Louis White';
+
 export default function Header({ home }) {
   return (
     <header className={styles.header}>

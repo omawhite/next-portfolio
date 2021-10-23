@@ -4,7 +4,6 @@ import styles from './layout.module.css';
 import Link from 'next/link';
 import Header from './Header';
 
-const name = 'Omar Louis White';
 export const siteTitle = `Omar's blog`;
 
 export default function Layout({ children, home }) {
