@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/Layout';
-import Bio from '../components/Bio';
+import BioBlurb from '../components/BioBlurb';
 import { getSortedPostsData } from '../lib/posts';
 import { generateRSSFeed } from '../lib/feed';
 
@@ -13,7 +13,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Bio />
+      <BioBlurb />
       <BlogPostsList postsData={allPostsData} />
     </Layout>
   );
