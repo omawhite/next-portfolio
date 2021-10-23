@@ -30,9 +30,4 @@ collections:
           default: '',
         }
       - { label: 'Description', name: 'description', widget: 'text' }
-      - {
-          label: 'Content',
-          name: 'content',
-          widget: 'markdown',
-          required: true,
-        }
+      - { label: 'Content', name: 'body', widget: 'markdown', required: true }
