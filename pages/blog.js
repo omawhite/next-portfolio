@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { getSortedPostsData } from '../lib/posts';
-import Layout, { siteTitle } from '../components/Layout';
+import Layout, { siteTitle } from '../components/layout';
 import BlogPostsList from '../components/BlogPostList';
 
 export default function Blog({ allPostsData }) {
