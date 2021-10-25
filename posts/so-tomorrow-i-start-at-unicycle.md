@@ -1,7 +1,7 @@
 ---
 title: So tomorrow I start at Unicycle
-date: '2021-10-24'
-lastUpdated: ''
+date: 2021-10-24
+lastUpdated: ""
 description: A story about leaving Target and starting at Unicycle
 ---
 
@@ -25,6 +25,6 @@ One of the things that really made me feel validated in my decision to join Unic
 
 I'll admit the idea of not having a job for 2 weeks was a little scary at first. I was worried about being able to keep my budget intact during the gap between my last target paycheck and my first Unicycle paycheck, but even with that anxiety taking this break has been worth it. I can be a bit of a workaholic so I think this downtime was an important lesson for me. I was really tempted to fill the time with a bunch of activities and side projects so that I wouldn't "waste" it, and I did spend some of the time doing projects like working on this blog, but I realized that I didn't need to put all this pressure on it. I'm still not perfect at it, but I'm beginning to really understand the value of rest. You don't have to always be working on something, you've got to balance out the drive and ambition with periods of rest to take proper care of yourself. So while I didn't accomplish all the things I would have liked to during these 2 weeks I still had a great time. I migrated my blog to nextjs, went a saw Venom 2(which was so bad in the best way possible) during the middle of a random Wednesday, and recorded some music with my friends. I chalk that up as a win! If you are in a position where you can take a break between jobs I highly recommend it.
 
-## Thats all folks
+## Out with the old, In with the new
 
 And so after 2 solid weeks of rest, relaxation, and reflection I'm feeling pretty good, I'm feeling recharged a bit. I’m really excited to be moving into the next phase of my career, and while I was dissatisfied with my experience at target towards the end, I have no regrets. I learned so much these past 4 years, I grew in ways I didn’t imagine were possible before I worked on target.com and met some fantastic people along the way. Leaving was bitter sweet, but it was time for something new, so tomorrow I start at Unicycle.
