@@ -1,6 +1,6 @@
 ---
 title: So tomorrow I start at Unicycle
-date: 2021-10-24
+date: '2021-10-24'
 lastUpdated: ''
 description: A story about leaving Target and starting at Unicycle
 ---
