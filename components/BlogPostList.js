@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Date from '../components/Date';
 import utilStyles from '../styles/utils.module.css';
+import BlogPostSnippet from './BlogPostSnippet';
 
 export default function BlogPostsList({ postsData = [] }) {
   return (
@@ -8,15 +9,7 @@ export default function BlogPostsList({ postsData = [] }) {
       <h2 className={utilStyles.headingLg}>Blog</h2>
       <ul className={utilStyles.list}>
         {postsData.map(({ id, date, title }) => (
-          <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
-              <a>{title}</a>
-            </Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
-          </li>
+          <BlogPostSnippet key={id} id={id} date={date} title={title} />
         ))}
       </ul>
     </section>
