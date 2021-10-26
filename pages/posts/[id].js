@@ -1,9 +1,9 @@
 import React from 'react';
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import utilStyles from '../../styles/utils.module.css';
-import Date from '../../components/date';
+import Date from '../../components/Date';
 
 export default function Post({ postData }) {
   return (
