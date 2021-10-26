@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { getSortedPostsData } from '../lib/posts';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/Layout';
 import BlogPostsList from '../components/BlogPostList';
 
 export default function Blog({ allPostsData }) {
@@ -9,6 +9,7 @@ export default function Blog({ allPostsData }) {
     <Layout>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="description" content="A blog by Omar Louis White" />
       </Head>
       <BlogPostsList postsData={allPostsData} />
     </Layout>
