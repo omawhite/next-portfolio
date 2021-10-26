@@ -10,8 +10,11 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="A blog by Omar Louis White" />
+        <meta name="description" content="A site by Omar Louis White" />
+        <meta name="keywords" content="" />
         <meta name="og:description" content="A blog by Omar Louis White" />
         <meta
           property="og:image"

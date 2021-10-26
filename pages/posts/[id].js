@@ -11,6 +11,9 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
         <meta name="og:title" content={postData.title} />
+        <meta name="description" content={postData.description} />
+        <meta name="og:description" content={postData.description} />
+        <meta name="og:type" content="article" />
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
