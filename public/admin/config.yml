@@ -17,16 +17,11 @@ collections:
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'datetime',
-          format: 'YYYY-MM-DD',
-        }
+      - { label: 'Publish Date', name: 'date', widget: 'string' }
       - {
           label: 'Last updated',
           name: 'lastUpdated',
-          widget: 'datetime',
+          widget: 'string',
           default: '',
           required: false,
         }
