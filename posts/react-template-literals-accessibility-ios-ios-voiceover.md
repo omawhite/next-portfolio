@@ -1,6 +1,6 @@
 ---
 title: React, template literals, accessibility, iOS, iOS voiceover
-date: yyyy-mm-dd
+date: 2021-11-04
 lastUpdated: ""
 description: How working with React and screen readers helped me learn more
   about string usage in javascript.
