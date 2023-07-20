@@ -9,8 +9,8 @@
     "lint": "next lint",
     "test": "",
     "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
-    "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build"
   },
   "dependencies": {
     "date-fns": "^2.25.0",
@@ -23,14 +23,17 @@
     "remark-html": "^13.0.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.10",
-    "@storybook/addon-essentials": "^6.3.10",
-    "@storybook/addon-links": "^6.3.10",
-    "@storybook/react": "^6.3.10",
+    "@storybook/addon-actions": "^7.1.0",
+    "@storybook/addon-essentials": "^7.1.0",
+    "@storybook/addon-links": "^7.1.0",
+    "@storybook/nextjs": "^7.1.0",
+    "@storybook/react": "^7.1.0",
     "chromatic": "^6.19.9",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-storybook": "^0.6.13",
     "prettier": "2.4.1",
+    "storybook": "^7.1.0",
     "storybook-css-modules-preset": "^1.1.1"
   }
 }
