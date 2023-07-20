@@ -24,4 +24,6 @@ const Template = (args) => (
   </ul>
 );
 
-export const Post = Template.bind();
+export const Post = {
+  render: Template,
+};

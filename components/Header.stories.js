@@ -12,6 +12,4 @@ export default {
   },
 };
 
-const Template = (args) => <Header {...args} />;
-
-export const Default = Template.bind();
+export const Default = {};

@@ -12,4 +12,6 @@ const Template = (args) => (
   </div>
 );
 
-export const Default = Template.bind();
+export const Default = {
+  render: Template,
+};
