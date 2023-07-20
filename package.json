@@ -1,5 +1,5 @@
 {
-  "name": "learn-starter",
+  "name": "Next-porfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -32,7 +32,5 @@
     "eslint-config-prettier": "^8.3.0",
     "prettier": "2.4.1",
     "storybook-css-modules-preset": "^1.1.1"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "learn-starter@0.1.0"
+  }
 }
