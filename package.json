@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "",
-    "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
+    "format:write": "prettier --write .",
+    "format:check": "prettier --check .",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook"
   },
