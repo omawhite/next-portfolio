@@ -1,5 +1,5 @@
 {
-  "name": "learn-starter",
+  "name": "next_porfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "",
-    "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
+    "format:write": "prettier --write .",
+    "format:check": "prettier --check .",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook"
   },
@@ -16,9 +17,9 @@
     "date-fns": "^2.25.0",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
-    "next": "^11.0.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "next": "^12.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "remark": "^13.0.0",
     "remark-html": "^13.0.2"
   },
@@ -27,12 +28,11 @@
     "@storybook/addon-essentials": "^6.3.10",
     "@storybook/addon-links": "^6.3.10",
     "@storybook/react": "^6.3.10",
+    "@types/react": "18.2.15",
     "chromatic": "^6.19.9",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "2.4.1",
     "storybook-css-modules-preset": "^1.1.1"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "learn-starter@0.1.0"
+  }
 }

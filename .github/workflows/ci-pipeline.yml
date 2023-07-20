@@ -1,0 +1,70 @@
+name: CI pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - name: Install dependecies
+        run: npm install
+      - run: npm run lint
+
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - name: 'Install dependecies'
+        run: npm install
+      - run: npm run format:check
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - name: 'Install dependecies'
+        run: npm install
+      - run: npm run test
+
+  chromatic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+      - name: Install dependecies
+        run: npm install
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          autoAcceptChanges: 'main'
+          onlyChanged: true
+          buildScriptName: 'storybook:build'
