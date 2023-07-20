@@ -1,0 +1,36 @@
+name: Chromatic CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # TODO: change this to 18.x and 20.x
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm install
+      - run: npm test --if-present
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          autoAcceptChanges: 'main'
+          onlyChanged: true

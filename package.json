@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "",
     "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook"
@@ -26,9 +27,12 @@
     "@storybook/addon-essentials": "^6.3.10",
     "@storybook/addon-links": "^6.3.10",
     "@storybook/react": "^6.3.10",
+    "chromatic": "^6.19.9",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "2.4.1",
     "storybook-css-modules-preset": "^1.1.1"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "learn-starter@0.1.0"
 }
