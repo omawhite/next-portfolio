@@ -1,4 +1,4 @@
-name: Nextjs CI
+name: Storybook CI
 
 on:
   push:
@@ -22,6 +22,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm install
-      - run: npm test --if-present
-      - run: npm run lint
-      - run: npm run build --if-present
+      #ensure storybook can build and run
+      - run: npm run storybook
+      - run: npm run storybook:build
