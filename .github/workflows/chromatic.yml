@@ -1,4 +1,4 @@
-name: Storybook CI
+name: Chromatic CI
 
 on:
   push:
@@ -23,6 +23,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - run: npm install
-      #ensure storybook can build and run
-      - run: npm run storybook
-      - run: npm run storybook:build
+      - run: npm test --if-present
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          autoAcceptChanges: 'main'
+          onlyChanged: true
