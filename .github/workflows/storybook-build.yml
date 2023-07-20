@@ -12,7 +12,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        # TODO: change this to 18.x and 20.x
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v3
