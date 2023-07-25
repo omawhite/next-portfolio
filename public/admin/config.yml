@@ -14,19 +14,15 @@ collections:
   - name: 'posts'
     label: 'Posts'
     folder: '/posts'
+    preview_path: 'posts/{{slug}}'
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'string',
-          default: 'yyyy-mm-dd',
-        }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - {
           label: 'Last updated',
           name: 'lastUpdated',
-          widget: 'string',
+          widget: 'datetime',
           default: '',
           required: false,
         }
