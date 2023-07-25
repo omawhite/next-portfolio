@@ -14,6 +14,7 @@ collections:
   - name: 'posts'
     label: 'Posts'
     folder: '/posts'
+    preview_path: 'posts/{{slug}}'
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
