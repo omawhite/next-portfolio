@@ -11,7 +11,8 @@
     "format:write": "prettier --write .",
     "format:check": "prettier --check .",
     "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook"
+    "storybook:build": "build-storybook",
+    "serve:storybook": "npm run storybook:build && npx serve -s storybook-static"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
