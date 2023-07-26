@@ -10,8 +10,8 @@
     "test": "",
     "format:write": "prettier --write .",
     "format:check": "prettier --check .",
-    "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
     "serve:storybook": "npm run storybook:build && npx serve -s storybook-static"
   },
   "dependencies": {
@@ -26,17 +26,20 @@
     "remark-html": "^13.0.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.3.10",
-    "@storybook/addon-essentials": "^6.3.10",
-    "@storybook/addon-links": "^6.3.10",
-    "@storybook/react": "^6.3.10",
+    "@storybook/addon-actions": "^7.1.1",
+    "@storybook/addon-essentials": "^7.1.1",
+    "@storybook/addon-links": "^7.1.1",
+    "@storybook/nextjs": "^7.1.1",
+    "@storybook/react": "^7.1.1",
     "@types/react": "18.2.15",
     "chromatic": "^6.19.9",
     "eslint-config-next": "^13.4.12",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-storybook": "^0.6.13",
     "postcss": "^8.4.27",
     "prettier": "2.4.1",
     "react-docgen-typescript-plugin": "^1.0.5",
+    "storybook": "^7.1.1",
     "storybook-css-modules-preset": "^1.1.1",
     "tailwindcss": "^3.3.3"
   }
