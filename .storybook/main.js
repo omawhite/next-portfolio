@@ -18,7 +18,7 @@ module.exports = {
     check: false,
     checkOptions: {},
     // taken from this issue: https://github.com/hipstersmoothie/react-docgen-typescript-plugin/issues/78s
-    reactDocgen: 'react-docgen-typescript-plugin',
+    reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
       propFilter: (prop) =>
