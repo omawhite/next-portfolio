@@ -7,10 +7,13 @@ export const siteTitle = `Omar's blog`;
 
 interface LayoutProps {
   children: React.ReactNode;
-  home: boolean;
+  showBackToHomeLink?: boolean;
 }
 
-export default function Layout({ children, home }: LayoutProps) {
+export default function Layout({
+  children,
+  showBackToHomeLink = false,
+}: LayoutProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -32,11 +35,11 @@ export default function Layout({ children, home }: LayoutProps) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <Header home={home} />
+      <Header home={showBackToHomeLink} />
 
       <main>{children}</main>
 
-      {!home && (
+      {showBackToHomeLink && (
         <div className={styles.backToHome}>
           <Link href="/">
             <a>← Back to home</a>

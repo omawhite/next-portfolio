@@ -6,7 +6,7 @@ export default {
   component: Layout,
   title: 'Templates/Layout',
   argTypes: {
-    home: {
+    showBackToHomeLink: {
       defaultValue: false,
       control: { type: 'boolean' },
     },

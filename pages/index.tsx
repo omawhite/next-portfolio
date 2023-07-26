@@ -8,7 +8,7 @@ import BlogPostsList from '../components/BlogPostList';
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout showBackToHomeLink>
       <Head>
         <title>{siteTitle}</title>
       </Head>
