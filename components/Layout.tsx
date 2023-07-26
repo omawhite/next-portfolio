@@ -42,7 +42,7 @@ export default function Layout({
       {showBackToHomeLink && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            ← Back to home
           </Link>
         </div>
       )}
