@@ -28,7 +28,6 @@ export default function Header({ home }: HeaderProps) {
       ) : (
         <>
           <Link href="/">
-
             <Image
               priority
               src={profilePic}
@@ -37,7 +36,6 @@ export default function Header({ home }: HeaderProps) {
               width={108}
               alt={name}
             />
-
           </Link>
         </>
       )}
