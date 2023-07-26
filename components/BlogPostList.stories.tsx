@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogPostsList from './BlogPostList';
-import { ComponentMeta } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 interface Post {
   id: string;
@@ -79,7 +79,7 @@ export default {
       },
     ] as Post[],
   },
-} as ComponentMeta<typeof BlogPostsList>;
+} as Meta<typeof BlogPostsList>;
 
 interface Args {
   postsData: Post[];
@@ -91,4 +91,6 @@ const Template = (args: Args) => (
   </div>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template,
+};

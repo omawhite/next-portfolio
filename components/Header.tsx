@@ -28,16 +28,14 @@ export default function Header({ home }: HeaderProps) {
       ) : (
         <>
           <Link href="/">
-            <a>
-              <Image
-                priority
-                src={profilePic}
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt={name}
-              />
-            </a>
+            <Image
+              priority
+              src={profilePic}
+              className={utilStyles.borderCircle}
+              height={108}
+              width={108}
+              alt={name}
+            />
           </Link>
         </>
       )}

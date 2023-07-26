@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogPostSnippet from './BlogPostSnippet';
 import utilStyles from '../styles/utils.module.css';
-import { ComponentMeta } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 export default {
   component: BlogPostSnippet,
@@ -17,7 +17,7 @@ export default {
     tags: ['My edits'],
     title: 'How I Ended Up A Software Engineer',
   },
-} as ComponentMeta<typeof BlogPostSnippet>;
+} as Meta<typeof BlogPostSnippet>;
 
 interface StoryProps {
   id: string;
@@ -32,4 +32,6 @@ const Template = (args: StoryProps) => (
   </ul>
 );
 
-export const Post = Template.bind({});
+export const Post = {
+  render: Template,
+};

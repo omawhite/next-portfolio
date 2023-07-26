@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from './Layout';
-import { ComponentMeta } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 export default {
   component: Layout,
@@ -11,7 +11,7 @@ export default {
       control: { type: 'boolean' },
     },
   },
-} as ComponentMeta<typeof Layout>;
+} as Meta<typeof Layout>;
 
 interface ArgTypes {
   home: boolean;
@@ -23,4 +23,6 @@ const Template = (args: ArgTypes) => (
   </Layout>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template,
+};

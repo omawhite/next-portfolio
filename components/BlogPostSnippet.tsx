@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Date from './Date';
+import DateComponent from './Date';
 import utilStyles from '../styles/utils.module.css';
 
 interface BlogPostSnippetProps {
@@ -15,12 +15,10 @@ export default function BlogPostSnippet({
 }: BlogPostSnippetProps) {
   return (
     <li className={utilStyles.listItem} key={id}>
-      <Link href={`/posts/${id}`}>
-        <a>{title}</a>
-      </Link>
+      <Link href={`/posts/${id}`}>{title}</Link>
       <br />
       <small className={utilStyles.lightText}>
-        <Date dateString={date} />
+        <DateComponent dateString={date} />
       </small>
     </li>
   );

@@ -1,11 +1,11 @@
 import React from 'react';
 import Bio from './Bio';
-import { ComponentMeta } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 export default {
   component: Bio,
   title: 'Components/Bio',
-} as ComponentMeta<typeof Bio>;
+} as Meta<typeof Bio>;
 
 const Template = () => (
   <div>
@@ -13,4 +13,6 @@ const Template = () => (
   </div>
 );
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template,
+};
