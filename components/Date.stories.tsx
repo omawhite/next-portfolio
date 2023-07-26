@@ -1,6 +1,6 @@
 import React from 'react';
 import Date from './Date';
-import { ComponentMeta } from '@storybook/react';
+import { Meta } from '@storybook/react';
 
 export default {
   components: Date,
@@ -11,7 +11,7 @@ export default {
       control: { type: 'date' },
     },
   },
-} as ComponentMeta<typeof Date>;
+} as Meta<typeof Date>;
 
 interface DateArgs {
   dateString: string;
@@ -19,4 +19,6 @@ interface DateArgs {
 
 const Template = (args: DateArgs) => <Date {...args} />;
 
-export const Default = Template.bind({});
+export const Default = {
+  render: Template,
+};
