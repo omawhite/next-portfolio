@@ -6,14 +6,12 @@ interface BlogPostSnippetProps {
   id: string;
   date: string;
   title: string;
-  content: string;
 }
 
 export default function BlogPostSnippet({
   id,
   date,
   title,
-  content,
 }: BlogPostSnippetProps) {
   return (
     <li className={utilStyles.listItem} key={id}>

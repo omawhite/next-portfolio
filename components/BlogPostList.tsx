@@ -1,9 +1,19 @@
-import Link from 'next/link';
-import Date from '../components/Date';
 import utilStyles from '../styles/utils.module.css';
 import BlogPostSnippet from './BlogPostSnippet';
 
-export default function BlogPostsList({ postsData = [] }) {
+interface PostData {
+  id: string;
+  date: string;
+  title: string;
+  content?: string;
+  description?: string;
+}
+
+interface BlogPostsListProps {
+  postsData: PostData[];
+}
+
+export default function BlogPostsList({ postsData = [] }: BlogPostsListProps) {
   return (
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       <h2 className={utilStyles.headingLg}>Blog</h2>
