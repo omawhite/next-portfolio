@@ -1,8 +1,19 @@
 module.exports = {
   stories: [
-  // Paths to the story files
-  '../components/*.stories.mdx', '../components/*.stories.js', '../components/*.stories.tsx'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials', 'storybook-css-modules-preset'],
+    // Paths to the story files
+    '../components/*.stories.mdx',
+    '../components/*.stories.js',
+    '../components/*.stories.tsx',
+  ],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    'storybook-css-modules-preset',
+    {
+      name: '@storybook/addon-styling',
+      options: {},
+    },
+  ],
   typescript: {
     check: false,
     checkOptions: {},
@@ -10,14 +21,15 @@ module.exports = {
     reactDocgen: 'react-docgen-typescript-plugin',
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
-      propFilter: prop => prop.parent ? !/node_modules/.test(prop.parent.fileName) : true
-    }
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
+    },
   },
   framework: {
     name: '@storybook/nextjs',
-    options: {}
+    options: {},
   },
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 };
