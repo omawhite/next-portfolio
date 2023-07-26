@@ -1,8 +1,18 @@
 import Link from 'next/link';
-import Date from '../components/Date';
+import Date from './Date';
 import utilStyles from '../styles/utils.module.css';
 
-export default function BlogPostSnippet({ id, date, title, content }) {
+interface BlogPostSnippetProps {
+  id: string;
+  date: string;
+  title: string;
+}
+
+export default function BlogPostSnippet({
+  id,
+  date,
+  title,
+}: BlogPostSnippetProps) {
   return (
     <li className={utilStyles.listItem} key={id}>
       <Link href={`/posts/${id}`}>

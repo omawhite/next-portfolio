@@ -1,13 +1,14 @@
 import React from 'react';
 import BlogPostSnippet from './BlogPostSnippet';
 import utilStyles from '../styles/utils.module.css';
+import { ComponentMeta } from '@storybook/react';
 
 export default {
   component: BlogPostSnippet,
   title: 'Components/BlogPostSnippet',
   args: {
     content:
-      'The other day I was cleaning out my inbox when I came across a message from [Code Academy](https://www.codecademy.com/). I quickly delete…',
+      'The other day I was cleaning out my inbox when I came across a message from [Code Academy](https://www.codecademy.com/). I quickly delete...',
 
     date: '2018-02-11',
     description: 'A story about my journey to becoming a software engineer.',
@@ -16,12 +17,19 @@ export default {
     tags: ['My edits'],
     title: 'How I Ended Up A Software Engineer',
   },
-};
+} as ComponentMeta<typeof BlogPostSnippet>;
 
-const Template = (args) => (
+interface StoryProps {
+  id: string;
+  date: string;
+  title: string;
+  content: string;
+}
+
+const Template = (args: StoryProps) => (
   <ul className={utilStyles.list}>
     <BlogPostSnippet {...args} />
   </ul>
 );
 
-export const Post = Template.bind();
+export const Post = Template.bind({});
