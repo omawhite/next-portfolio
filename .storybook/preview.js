@@ -3,9 +3,6 @@ import '../styles/utils.module.css';
 
 import { withThemeByClassName } from '@storybook/addon-styling';
 
-/* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
-import '../src/index.css';
-
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
 };
