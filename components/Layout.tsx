@@ -1,12 +1,16 @@
 import Head from 'next/head';
-
 import styles from './Layout.module.css';
 import Link from 'next/link';
 import Header from './Header';
 
 export const siteTitle = `Omar's blog`;
 
-export default function Layout({ children, home }) {
+interface LayoutProps {
+  children: React.ReactNode;
+  home: boolean;
+}
+
+export default function Layout({ children, home }: LayoutProps) {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,8 +31,11 @@ export default function Layout({ children, home }) {
         <meta name="og:site_name" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       <Header home={home} />
+
       <main>{children}</main>
+
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
