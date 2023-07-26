@@ -6,7 +6,11 @@ import styles from './Header.module.css';
 
 const name = 'Omar Louis White';
 
-export default function Header({ home }) {
+interface HeaderProps {
+  home: boolean;
+}
+
+export default function Header({ home }: HeaderProps) {
   return (
     <header className={styles.header}>
       {home ? (
