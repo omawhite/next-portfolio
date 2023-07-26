@@ -1,5 +1,6 @@
 package-lock.json
- node_modules/
- .next/
- .github
- public
+node_modules/
+.next/
+.github
+public
+storybook-static
