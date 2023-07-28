@@ -19,8 +19,11 @@ export default function Contact() {
         >
           <input type="hidden" name="form-name" value="contact" />
           <div>
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="name" className="label">
+              Name:
+            </label>
             <input
+              className="input"
               type="text"
               name="name"
               id="name"
@@ -29,8 +32,11 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" className="label">
+              Email:
+            </label>
             <input
+              className="input"
               type="email"
               name="email"
               id="email"
@@ -39,8 +45,11 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="subject">Subject:</label>
+            <label htmlFor="subject" className="label">
+              Subject:
+            </label>
             <input
+              className="input"
               type="text"
               name="subject"
               id="subject"
@@ -48,8 +57,11 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="message">Your message:</label>
+            <label htmlFor="message" className="label">
+              Your message:
+            </label>
             <textarea
+              className="textarea"
               id="message"
               name="message"
               required
