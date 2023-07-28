@@ -3,18 +3,6 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../../components/Layout';
 
 export default function Contact() {
-  const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('submit');
-    // const form = e.currentTarget;
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //   body: new URLSearchParams(new FormData(form)).toString(),
-    // })
-    //   .then(() => alert('Success!'))
-    //   .catch((error) => alert(error));
-  }, []);
   return (
     <Layout>
       <Head>
