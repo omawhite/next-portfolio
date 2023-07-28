@@ -57,7 +57,9 @@ export default function Contact() {
               spellCheck="true"
             />
           </div>
-          <button type="submit">Send</button>
+          <button type="submit" className="btn">
+            Send
+          </button>
         </form>
       </section>
     </Layout>
