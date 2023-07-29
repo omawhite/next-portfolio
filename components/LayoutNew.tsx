@@ -23,7 +23,7 @@ export default function Layout({
         {shouldAvatarLinkToHome ? (
           <>
             <Link href="/">
-              <Avatar>
+              <Avatar className="w-36 h-36">
                 <AvatarImage src="/images/profile.jpg" />
                 <AvatarFallback>OLW</AvatarFallback>
               </Avatar>
@@ -31,7 +31,7 @@ export default function Layout({
           </>
         ) : (
           <>
-            <Avatar>
+            <Avatar className="w-36 h-36">
               <AvatarImage src="/images/profile.jpg" />
               <AvatarFallback>OLW</AvatarFallback>
             </Avatar>
