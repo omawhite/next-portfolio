@@ -7,7 +7,7 @@ import { generateRSSFeed } from '../lib/feed';
 
 export default function Blog({ allPostsData }) {
   return (
-    <Layout>
+    <Layout showBackToHomeLink>
       <Head>
         <title>{siteTitle}</title>
         <meta name="description" content="A blog by Omar Louis White" />

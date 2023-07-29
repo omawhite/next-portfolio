@@ -7,7 +7,7 @@ import Date from '../../components/Date';
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <Layout showBackToHomeLink>
       <Head>
         <title>{postData.title}</title>
         <meta name="og:title" content={postData.title} />

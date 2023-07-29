@@ -34,11 +34,9 @@ export default function Layout({
         <meta name="og:site_name" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
-      <Header home={showBackToHomeLink} />
-
+      {/* //TODO base this off of the app route rather than a prop */}
+      <Header home={!showBackToHomeLink} />
       <main>{children}</main>
-
       {showBackToHomeLink && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
