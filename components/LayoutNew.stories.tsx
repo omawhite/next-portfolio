@@ -5,6 +5,9 @@ import { Meta } from '@storybook/react';
 export default {
   component: Layout,
   title: 'Templates/LayoutNew',
+  args: {
+    shouldAvatarLinkToHome: false,
+  },
 } as Meta<typeof Layout>;
 
 interface ArgTypes {}

@@ -6,7 +6,7 @@ import {
 } from '@/components/shadcn/ui/avatar';
 import Link from 'next/link';
 
-export const siteTitle = `Omar's blog`;
+export const siteTitle = `Omar Louis White`;
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -28,6 +28,7 @@ export default function Layout({
                 <AvatarFallback>OLW</AvatarFallback>
               </Avatar>
             </Link>
+            <TypographyH1>{siteTitle}</TypographyH1>
           </>
         ) : (
           <>
@@ -37,7 +38,6 @@ export default function Layout({
             </Avatar>
           </>
         )}
-        <TypographyH1>{siteTitle}</TypographyH1>
       </header>
       <main>{children}</main>
     </>
