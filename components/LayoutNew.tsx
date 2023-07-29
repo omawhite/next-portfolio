@@ -1,21 +1,43 @@
-import Head from 'next/head';
-import styles from './Layout.module.css';
+import TypographyH1 from '@/components/shadcn/ui/TypographyH1';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '@/components/shadcn/ui/avatar';
 import Link from 'next/link';
-import Header from './Header';
-import { Avatar } from '../@/components/shadcn/ui/avatar';
 
 export const siteTitle = `Omar's blog`;
 
 interface LayoutProps {
   children: React.ReactNode;
+  shouldAvatarLinkToHome?: boolean;
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({
+  children,
+  shouldAvatarLinkToHome,
+}: LayoutProps) {
   return (
     <>
       <header className="px-6">
-        <div>This will be a header</div>
-        <Avatar></Avatar>
+        {shouldAvatarLinkToHome ? (
+          <>
+            <Link href="/">
+              <Avatar>
+                <AvatarImage src="/images/profile.jpg" />
+                <AvatarFallback>OLW</AvatarFallback>
+              </Avatar>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Avatar>
+              <AvatarImage src="/images/profile.jpg" />
+              <AvatarFallback>OLW</AvatarFallback>
+            </Avatar>
+          </>
+        )}
+        <TypographyH1>{siteTitle}</TypographyH1>
       </header>
       <main className="px-6">{children}</main>
     </>
