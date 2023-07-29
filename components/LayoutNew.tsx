@@ -12,7 +12,8 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <div>stuff goes here</div>
+      <header className="px-6">This will be a header</header>
+      <main className="px-6">{children}</main>
     </>
   );
 }
