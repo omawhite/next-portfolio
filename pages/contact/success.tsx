@@ -1,9 +1,9 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { isContactPageEnabled } from '../../featureFlags';
-import TypographyH1 from '../../components/shadcn/TypographyH1';
-import TypographyP from '../../components/shadcn/TypographyP';
-import TypographyMuted from '../../components/shadcn/TypographyMuted';
+import TypographyH1 from '@/components/shadcn/ui/TypographyH1';
+import TypographyP from '@/components/shadcn/ui/TypographyP';
+import TypographyMuted from '@/components/shadcn/ui/TypographyMuted';
 
 const Success: NextPage = () => {
   return (
