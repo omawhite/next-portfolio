@@ -19,7 +19,7 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <>
-      <header className="px-6">
+      <header className="px-6 flex flex-col content-center items-center">
         {shouldAvatarLinkToHome ? (
           <>
             <Link href="/">
@@ -39,7 +39,7 @@ export default function Layout({
         )}
         <TypographyH1>{siteTitle}</TypographyH1>
       </header>
-      <main className="px-6">{children}</main>
+      <main>{children}</main>
     </>
   );
 }
