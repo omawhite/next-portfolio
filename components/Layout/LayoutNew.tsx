@@ -11,6 +11,7 @@ export const siteTitle = `Omar Louis White`;
 interface LayoutProps {
   children: React.ReactNode;
   shouldAvatarLinkToHome?: boolean;
+  hideHeader?: boolean;
   headerText?: string;
 }
 
@@ -18,6 +19,7 @@ export default function Layout({
   children,
   shouldAvatarLinkToHome,
   headerText = siteTitle,
+  hideHeader = false,
 }: LayoutProps) {
   return (
     <>
@@ -39,7 +41,7 @@ export default function Layout({
             </Avatar>
           </>
         )}
-        <TypographyH1>{headerText}</TypographyH1>
+        {!hideHeader && <TypographyH1>{headerText}</TypographyH1>}
       </header>
       <main className="p-6 flex flex-col content-center items-center">
         {children}

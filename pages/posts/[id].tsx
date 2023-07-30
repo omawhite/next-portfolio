@@ -1,15 +1,16 @@
 import React from 'react';
-// import Layout from '../../components/Layout/Layout';
 import Layout from '../../components/Layout/LayoutNew';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import utilStyles from '../../styles/utils.module.css';
 import Date from '../../components/Date';
 import Link from 'next/link';
+import TypographyH1 from '@/components/shadcn/ui/TypographyH1';
+import TypographyMuted from '@/components/shadcn/ui/TypographyMuted';
 
 export default function Post({ postData }) {
   return (
-    <Layout shouldAvatarLinkToHome>
+    <Layout shouldAvatarLinkToHome={true} hideHeader={true}>
       <Head>
         <title>{postData.title}</title>
         <meta name="og:title" content={postData.title} />
@@ -17,11 +18,11 @@ export default function Post({ postData }) {
         <meta name="og:description" content={postData.description} />
         <meta name="og:type" content="article" />
       </Head>
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+      <article className="max-w-xl">
+        <TypographyH1>{postData.title}</TypographyH1>
+        <TypographyMuted>
           <Date dateString={postData.date} />
-        </div>
+        </TypographyMuted>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       <div className="mt-12">
