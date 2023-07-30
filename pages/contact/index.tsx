@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../../components/Layout/LayoutNew';
-import { isContactPageEnabled } from '../../featureFlags';
 import { Label } from '@/components/shadcn/ui/label';
 import { Input } from '@/components/shadcn/ui/input';
 import { Textarea } from '@/components/shadcn/ui/textarea';
@@ -82,17 +81,3 @@ export default function Contact() {
     </Layout>
   );
 }
-
-export const getServerSideProps = () => {
-  if (isContactPageEnabled) {
-    return {
-      props: {},
-    };
-  }
-  return {
-    redirect: {
-      destination: '/',
-      permanent: false,
-    },
-  };
-};
