@@ -28,3 +28,12 @@ collections:
         }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: true }
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'Home Page Content'
+        name: 'home'
+        file: 'content/home.md'
+        fields:
+          - { label: 'Page title', name: 'title', widget: 'string' }
+          - { label: 'Bio content', name: 'bio', widget: 'markdown' }
