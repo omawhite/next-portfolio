@@ -19,16 +19,15 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <>
-      <header className="px-6 flex flex-col content-center items-center">
+      <header className="px-6 flex flex-col items-center">
         {shouldAvatarLinkToHome ? (
           <>
             <Link href="/">
-              <Avatar className="w-36 h-36">
+              <Avatar className="w-32 h-32">
                 <AvatarImage src="/images/profile.jpg" />
                 <AvatarFallback>OLW</AvatarFallback>
               </Avatar>
             </Link>
-            <TypographyH1>{siteTitle}</TypographyH1>
           </>
         ) : (
           <>
@@ -36,10 +35,13 @@ export default function Layout({
               <AvatarImage src="/images/profile.jpg" />
               <AvatarFallback>OLW</AvatarFallback>
             </Avatar>
+            <TypographyH1>{siteTitle}</TypographyH1>
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main className="p-6 flex flex-col content-center items-center">
+        {children}
+      </main>
     </>
   );
 }
