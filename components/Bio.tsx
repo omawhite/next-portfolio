@@ -4,7 +4,7 @@ const bio = `Hi my name is Omar, I’m a software engineer that specializes in c
 
 export default function Bio() {
   return (
-    <section className="max-w-lg">
+    <section className="max-w-xl">
       <TypographyP>{bio}</TypographyP>
     </section>
   );
