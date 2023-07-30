@@ -11,11 +11,13 @@ export const siteTitle = `Omar Louis White`;
 interface LayoutProps {
   children: React.ReactNode;
   shouldAvatarLinkToHome?: boolean;
+  headerText?: string;
 }
 
 export default function Layout({
   children,
   shouldAvatarLinkToHome,
+  headerText = siteTitle,
 }: LayoutProps) {
   return (
     <>
@@ -35,9 +37,9 @@ export default function Layout({
               <AvatarImage src="/images/profile.jpg" />
               <AvatarFallback>OLW</AvatarFallback>
             </Avatar>
-            <TypographyH1>{siteTitle}</TypographyH1>
           </>
         )}
+        <TypographyH1>{headerText}</TypographyH1>
       </header>
       <main className="p-6 flex flex-col content-center items-center">
         {children}

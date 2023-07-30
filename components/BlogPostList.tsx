@@ -1,3 +1,4 @@
+import { TypographyH2 } from '@/components/shadcn/ui/TypographyH2';
 import utilStyles from '../styles/utils.module.css';
 import BlogPostSnippet from './BlogPostSnippet';
 
@@ -16,7 +17,7 @@ interface BlogPostsListProps {
 export default function BlogPostsList({ postsData = [] }: BlogPostsListProps) {
   return (
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-      <h2 className={utilStyles.headingLg}>Blog</h2>
+      <TypographyH2>All Posts</TypographyH2>
       <ul className={utilStyles.list}>
         {postsData.map(({ id, date, title }) => (
           <BlogPostSnippet key={id} id={id} date={date} title={title} />
