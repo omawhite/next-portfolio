@@ -19,15 +19,15 @@ export default function Post({ postData }) {
         <meta name="og:type" content="article" />
       </Head>
       <article className="max-w-xl">
-        <TypographyH1>{postData.title}</TypographyH1>
+        <TypographyH1 className="mb-4">{postData.title}</TypographyH1>
         <TypographyMuted>
           <Date dateString={postData.date} />
         </TypographyMuted>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="mt-12 self-start">
+          <Link href="/blog"> ← Back to blog</Link>
+        </div>
       </article>
-      <div className="mt-12">
-        <Link href="/blog"> ← Back to blog</Link>
-      </div>
     </Layout>
   );
 }
