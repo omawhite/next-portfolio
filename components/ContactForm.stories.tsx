@@ -1,33 +1,32 @@
-import ContactForm from "./ContactForm";
-import { StoryObj, Meta } from "@storybook/react";
+import ContactForm from './ContactForm';
+import { StoryObj, Meta } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
-import { ar } from "date-fns/locale";
+import { ar } from 'date-fns/locale';
 
 const meta: Meta<typeof ContactForm> = {
   component: ContactForm,
-  title: "Components/ContactForm",
-  parameters:{
+  title: 'Components/ContactForm',
+  parameters: {
     actions: {
-      argTypesRegex: "^on.*",
+      argTypesRegex: '^on.*',
     },
-    controls:{
+    controls: {
       hideNoControlsWarning: true,
-    }
+    },
   },
-  argTypes:{
+  argTypes: {
     onSubmit: { action: 'submit' },
   },
   args: {
     onSubmit(event) {
-        event.preventDefault();
+      event.preventDefault();
     },
-  }
+  },
 };
 
 export default meta;
 type Story = StoryObj<typeof ContactForm>;
-
 
 export const Default: Story = {};
 
@@ -63,7 +62,10 @@ export const FillOutForm: Story = {
     await userEvent.type(nameInput, 'Omar White');
     await userEvent.type(emailInput, 'omar@louiswhite.me');
     await userEvent.type(subjectInput, 'This is a test');
-    await userEvent.type(messageInput, 'This is a test message. YEAAAAAH BOIIIIIII!!!!!!!!!!!!');
+    await userEvent.type(
+      messageInput,
+      'This is a test message. YEAAAAAH BOIIIIIII!!!!!!!!!!!!'
+    );
     await userEvent.click(submitButton);
   },
 };
