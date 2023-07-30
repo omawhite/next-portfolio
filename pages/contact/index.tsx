@@ -13,7 +13,7 @@ export default function Contact() {
       <Head>
         <title>{`contact - ${siteTitle}`}</title>
       </Head>
-      <section className="flex flex-col justify-center max-w-xl [width:32rem]">
+      <section className="flex flex-col justify-center max-w-xl [width:36rem]">
         <form
           name="contact"
           autoComplete="on"

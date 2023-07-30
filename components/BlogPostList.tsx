@@ -16,7 +16,9 @@ interface BlogPostsListProps {
 
 export default function BlogPostsList({ postsData = [] }: BlogPostsListProps) {
   return (
-    <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+    <section
+      className={`${utilStyles.headingMd} ${utilStyles.padding1px} [width:36rem]`}
+    >
       <TypographyH2>All Posts</TypographyH2>
       <ul className={'list-none'}>
         {postsData.map(({ id, date, title }) => (
