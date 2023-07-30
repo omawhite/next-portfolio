@@ -1,29 +1,33 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import Layout, { siteTitle } from '../../components/Layout/Layout';
+import Layout, { siteTitle } from '../../components/Layout/LayoutNew';
 import { isContactPageEnabled } from '../../featureFlags';
+import { Label } from '@/components/shadcn/ui/label';
+import { Input } from '@/components/shadcn/ui/input';
+import { Textarea } from '@/components/shadcn/ui/textarea';
+import { Button } from '@/components/shadcn/ui/button';
 
 export default function Contact() {
   return (
-    <Layout>
+    <Layout headerText="Contact me">
       <Head>
         <title>{`contact - ${siteTitle}`}</title>
       </Head>
-      <section className="flex flex-col justify-center p-6">
-        <h1 className="text-xl">Contact</h1>
+      <section className="flex flex-col justify-center max-w-xl [width:32rem]">
         <form
           name="contact"
           autoComplete="on"
           method="POST"
           action="/contact/success"
           data-netlify="true"
+          className="flex flex-col gap-3"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div>
-            <label htmlFor="name" className="label">
+            <Label htmlFor="name" className="label">
               Name:
-            </label>
-            <input
+            </Label>
+            <Input
               className="input"
               type="text"
               name="name"
@@ -33,10 +37,10 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="email" className="label">
+            <Label htmlFor="email" className="label">
               Email:
-            </label>
-            <input
+            </Label>
+            <Input
               className="input"
               type="email"
               name="email"
@@ -46,10 +50,10 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="subject" className="label">
+            <Label htmlFor="subject" className="label">
               Subject:
-            </label>
-            <input
+            </Label>
+            <Input
               className="input"
               type="text"
               name="subject"
@@ -58,10 +62,10 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="message" className="label">
+            <Label htmlFor="message" className="label">
               Your message:
-            </label>
-            <textarea
+            </Label>
+            <Textarea
               className="textarea"
               id="message"
               name="message"
@@ -70,9 +74,9 @@ export default function Contact() {
               spellCheck="true"
             />
           </div>
-          <button type="submit" className="btn">
+          <Button type="submit" className="self-start">
             Send
-          </button>
+          </Button>
         </form>
       </section>
     </Layout>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout/LayoutNew';
-import BioBlurb from '../components/Bio';
+import Bio from '../components/Bio';
 import { getSortedPostsData } from '../lib/posts';
 
 import RecentPosts from 'components/RecentPosts';
@@ -8,7 +8,7 @@ import RecentPosts from 'components/RecentPosts';
 export default function Home({ allPostsData }) {
   return (
     <Layout>
-      <BioBlurb />
+      <Bio />
       <RecentPosts postsData={allPostsData} />
     </Layout>
   );
