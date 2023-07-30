@@ -16,7 +16,11 @@ export async function getHomePageContentData() {
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
-  const bioContentHtml = await markdownContentToHTML(matterResult.data.bioContent || '')
+  const bioContentHtml = await markdownContentToHTML(matterResult.data.bio || '')
+
+  //Uncomment to debug
+  // console.log('matterResult', matterResult)
+  // console.log('bioContentHtml', bioContentHtml)
 
   return {
     pageTitle: matterResult.data.title,

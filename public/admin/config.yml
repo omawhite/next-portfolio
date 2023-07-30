@@ -35,5 +35,16 @@ collections:
         name: 'home'
         file: 'content/home.md'
         fields:
-          - { label: 'Page title', name: 'title', widget: 'string' }
-          - { label: 'Bio content', name: 'bio', widget: 'markdown' }
+          - {
+              label: 'Page title',
+              name: 'title',
+              widget: 'string',
+              required: true,
+            }
+          - {
+              label: 'Bio content',
+              name: 'bio',
+              widget: 'markdown',
+              required: true,
+              sanitize_preview: true,
+            }
