@@ -1,6 +1,10 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
 import { siteTitle } from '@/constants';
+import Script from 'next/script';
+import { isProduction } from '@/featureFlags';
+
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export default function Document() {
   return (
@@ -23,6 +27,22 @@ export default function Document() {
         <meta name="og:site_name" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      {isProduction && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+          />
+          <Script id="google-analytics">
+            {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', '${gaMeasurementId}');
+        `}
+          </Script>
+        </>
+      )}
       <body>
         <Main />
         <NextScript />

@@ -6,7 +6,11 @@ import { generateRSSFeed } from '../lib/feed';
 
 export default function Blog({ allPostsData }) {
   return (
-    <Layout shouldAvatarLinkToHome={true} headerText="Blog">
+    <Layout
+      shouldAvatarLinkToHome={true}
+      headerText="Blog"
+      documentTitle="Blog"
+    >
       <BlogPostsList postsData={allPostsData} />
     </Layout>
   );

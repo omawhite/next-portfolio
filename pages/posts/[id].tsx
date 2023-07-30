@@ -10,9 +10,12 @@ import { cn } from '@/lib/utils';
 
 export default function Post({ postData }) {
   return (
-    <Layout shouldAvatarLinkToHome={true} hideHeader={true}>
+    <Layout
+      shouldAvatarLinkToHome={true}
+      hideHeaderText={true}
+      documentTitle={postData.title}
+    >
       <Head>
-        <title>{postData.title}</title>
         <meta name="og:title" content={postData.title} />
         <meta name="description" content={postData.description} />
         <meta name="og:description" content={postData.description} />
