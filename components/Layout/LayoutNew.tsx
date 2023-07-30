@@ -37,7 +37,10 @@ export default function Layout({
             <>
               <Link href="/">
                 <Avatar className="w-32 h-32">
-                  <AvatarImage src="/images/profile.jpg" />
+                  <AvatarImage
+                    src="/images/profile.jpg"
+                    alt="A picture of me, Omar White"
+                  />
                   <AvatarFallback>OLW</AvatarFallback>
                 </Avatar>
               </Link>
@@ -45,7 +48,10 @@ export default function Layout({
           ) : (
             <>
               <Avatar className="w-36 h-36">
-                <AvatarImage src="/images/profile.jpg" />
+                <AvatarImage
+                  src="/images/profile.jpg"
+                  alt="A picture of me, Omar White"
+                />
                 <AvatarFallback>OLW</AvatarFallback>
               </Avatar>
             </>
