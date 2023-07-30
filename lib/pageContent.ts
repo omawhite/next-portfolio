@@ -4,12 +4,13 @@ import matter from 'gray-matter';
 import { markdownContentToHTML } from './markdown';
 
 const contentDirectory = path.join(process.cwd(), 'content');
+const homepageContentFileName = 'home.md';
 
 /**
  * Funtion to get the content data for home page
  */
 export async function getHomePageContentData() {
-  const homepageContentFileName = 'home.md';
+  
   const fullPath = path.join(contentDirectory, homepageContentFileName);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
