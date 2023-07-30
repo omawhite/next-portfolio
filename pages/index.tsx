@@ -4,11 +4,22 @@ import Bio from '../components/Bio';
 import { getSortedPostsData } from '../lib/posts';
 
 import RecentPosts from 'components/RecentPosts';
+import { getHomePageContentData } from 'lib/pageContent';
 
-export default function Home({ allPostsData }) {
+interface HomePageProps {
+  allPostsData: any;
+  pageTitle: string;
+  bioContentHtml: string;
+}
+
+export default function Home({
+  allPostsData,
+  pageTitle,
+  bioContentHtml,
+}: HomePageProps) {
   return (
-    <Layout>
-      <Bio />
+    <Layout headerText={pageTitle}>
+      <Bio bio={bioContentHtml} />
       <RecentPosts postsData={allPostsData} />
     </Layout>
   );
@@ -16,9 +27,12 @@ export default function Home({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData();
+  const { pageTitle, bioContentHtml } = await getHomePageContentData();
   return {
     props: {
       allPostsData,
+      pageTitle,
+      bioContentHtml,
     },
   };
 }
