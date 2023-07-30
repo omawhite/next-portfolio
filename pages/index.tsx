@@ -3,13 +3,13 @@ import Layout from '../components/LayoutNew';
 import BioBlurb from '../components/Bio';
 import { getSortedPostsData } from '../lib/posts';
 
-import BlogPostsList from '../components/BlogPostList';
+import RecentPosts from 'components/RecentPosts';
 
 export default function Home({ allPostsData }) {
   return (
     <Layout>
       <BioBlurb />
-      <BlogPostsList postsData={allPostsData} />
+      <RecentPosts postsData={allPostsData} />
     </Layout>
   );
 }
