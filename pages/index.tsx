@@ -18,7 +18,7 @@ export default function Home({
   bioContentHtml,
 }: HomePageProps) {
   return (
-    <Layout headerText={pageTitle}>
+    <Layout headerText={pageTitle} documentTitle={pageTitle}>
       <Bio bio={bioContentHtml} />
       <RecentPosts postsData={allPostsData} />
     </Layout>

@@ -5,6 +5,7 @@ import {
   AvatarImage,
 } from '@/components/shadcn/ui/avatar';
 import { siteTitle } from '@/constants';
+import Head from 'next/head';
 import Link from 'next/link';
 
 interface LayoutProps {
@@ -12,6 +13,7 @@ interface LayoutProps {
   shouldAvatarLinkToHome?: boolean;
   hideHeader?: boolean;
   headerText?: string;
+  documentTitle?: string;
 }
 
 export default function Layout({
@@ -19,9 +21,14 @@ export default function Layout({
   shouldAvatarLinkToHome,
   headerText = siteTitle,
   hideHeader = false,
+  documentTitle,
 }: LayoutProps) {
+  const title = documentTitle ? `${documentTitle} - ${siteTitle}` : siteTitle;
   return (
     <>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <header className="p-6 flex flex-col items-center">
         {shouldAvatarLinkToHome ? (
           <>
