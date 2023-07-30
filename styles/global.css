@@ -79,6 +79,10 @@
     text-decoration: none;
     color: theme('colors.blue.600');
   }
+  a:hover {
+    text-decoration: underline;
+    color: theme('colors.blue.500');
+  }
 }
 
 @layer components {
