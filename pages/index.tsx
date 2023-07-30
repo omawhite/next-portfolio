@@ -1,19 +1,15 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout, { siteTitle } from '../components/Layout';
-import BioBlurb from '../components/BioBlurb';
+import Layout from '../components/Layout/LayoutNew';
+import Bio from '../components/Bio';
 import { getSortedPostsData } from '../lib/posts';
 
-import BlogPostsList from '../components/BlogPostList';
+import RecentPosts from 'components/RecentPosts';
 
 export default function Home({ allPostsData }) {
   return (
     <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <BioBlurb />
-      <BlogPostsList postsData={allPostsData} />
+      <Bio />
+      <RecentPosts postsData={allPostsData} />
     </Layout>
   );
 }
