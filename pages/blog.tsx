@@ -1,6 +1,6 @@
 import React from 'react';
 import { getSortedPostsData } from '../lib/posts';
-import Layout from '../components/LayoutNew';
+import Layout from '../components/Layout/LayoutNew';
 import BlogPostsList from '../components/BlogPostList';
 import { generateRSSFeed } from '../lib/feed';
 

@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import Head from 'next/head';
-import Layout, { siteTitle } from '../../components/Layout';
+import Layout, { siteTitle } from '../../components/Layout/Layout';
 import { isContactPageEnabled } from '../../featureFlags';
 
 export default function Contact() {

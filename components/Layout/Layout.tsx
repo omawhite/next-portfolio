@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from './Layout.module.css';
 import Link from 'next/link';
-import Header from './Header';
+import Header from '../Header';
 
 export const siteTitle = `Omar's blog`;
 

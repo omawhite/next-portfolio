@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../components/LayoutNew';
+import Layout from '../components/Layout/LayoutNew';
 import BioBlurb from '../components/Bio';
 import { getSortedPostsData } from '../lib/posts';
 
