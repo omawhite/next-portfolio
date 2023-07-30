@@ -1,11 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout, { siteTitle } from '../../components/Layout/LayoutNew';
-import { isContactPageEnabled } from '../../featureFlags';
+import Layout from '../../components/Layout/LayoutNew';
 import { Label } from '@/components/shadcn/ui/label';
 import { Input } from '@/components/shadcn/ui/input';
 import { Textarea } from '@/components/shadcn/ui/textarea';
 import { Button } from '@/components/shadcn/ui/button';
+import { siteTitle } from '@/constants';
 
 export default function Contact() {
   return (
@@ -82,17 +82,3 @@ export default function Contact() {
     </Layout>
   );
 }
-
-export const getServerSideProps = () => {
-  if (isContactPageEnabled) {
-    return {
-      props: {},
-    };
-  }
-  return {
-    redirect: {
-      destination: '/',
-      permanent: false,
-    },
-  };
-};

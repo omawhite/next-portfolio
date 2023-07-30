@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-export const siteTitle = `Omar's blog`;
+import { siteTitle } from '@/constants';
 
 export default function Document() {
   return (

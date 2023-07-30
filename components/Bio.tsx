@@ -1,11 +1,11 @@
-import TypographyP from '@/components/shadcn/ui/TypographyP';
+interface BioProps {
+  bio: string;
+}
 
-const bio = `Hi my name is Omar, I’m a software engineer that specializes in creating great front end experiences, primarily using react. When I’m not engineering I like to game and make music.`;
-
-export default function Bio() {
+export default function Bio({ bio }: BioProps) {
   return (
     <section className="max-w-xl">
-      <TypographyP>{bio}</TypographyP>
+      <div className="postContent" dangerouslySetInnerHTML={{ __html: bio }} />
     </section>
   );
 }

@@ -11,6 +11,8 @@ module.exports = {
       name: '@storybook/addon-styling',
       options: {},
     },
+    '@storybook/actions',
+    '@storybook/addon-interactions',
   ],
   typescript: {
     check: false,
