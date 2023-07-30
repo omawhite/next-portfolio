@@ -4,9 +4,8 @@ import {
   AvatarFallback,
   AvatarImage,
 } from '@/components/shadcn/ui/avatar';
+import { siteTitle } from '@/constants';
 import Link from 'next/link';
-
-export const siteTitle = `Omar Louis White`;
 
 interface LayoutProps {
   children: React.ReactNode;
