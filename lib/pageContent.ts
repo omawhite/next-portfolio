@@ -5,6 +5,9 @@ import { markdownContentToHTML } from './markdown';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
+/**
+ * Funtion to get the content data for home page
+ */
 export function getHomePageContentData() {
   const homepageContentFileName = 'home.md';
   const fullPath = path.join(contentDirectory, homepageContentFileName);
