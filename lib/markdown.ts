@@ -1,5 +1,5 @@
-import remark from "remark";
-import html from "remark-html";
+import remark from 'remark';
+import html from 'remark-html';
 
 /**
  * Converts markdown content into an html string for rendering
