@@ -38,7 +38,7 @@ export default function Document() {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', ${gaMeasurementId});
+          gtag('config', '${gaMeasurementId}');
         `}
           </Script>
         </>
