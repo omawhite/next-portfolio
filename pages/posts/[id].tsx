@@ -12,7 +12,7 @@ export default function Post({ postData }) {
   return (
     <Layout
       shouldAvatarLinkToHome={true}
-      hideHeader={true}
+      hideHeaderText={true}
       documentTitle={postData.title}
     >
       <Head>
