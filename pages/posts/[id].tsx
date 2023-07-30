@@ -2,11 +2,11 @@ import React from 'react';
 import Layout from '../../components/Layout/LayoutNew';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
-import utilStyles from '../../styles/utils.module.css';
 import Date from '../../components/Date';
 import Link from 'next/link';
 import TypographyH1 from '@/components/shadcn/ui/TypographyH1';
 import TypographyMuted from '@/components/shadcn/ui/TypographyMuted';
+import { cn } from '@/lib/utils';
 
 export default function Post({ postData }) {
   return (
@@ -23,7 +23,10 @@ export default function Post({ postData }) {
         <TypographyMuted>
           <Date dateString={postData.date} />
         </TypographyMuted>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className={cn('postContent')}
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
         <div className="mt-12 self-start">
           <Link href="/blog"> ← Back to blog</Link>
         </div>
