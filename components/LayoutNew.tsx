@@ -19,7 +19,7 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <>
-      <header className="px-6 flex flex-col items-center">
+      <header className="p-6 flex flex-col items-center">
         {shouldAvatarLinkToHome ? (
           <>
             <Link href="/">
