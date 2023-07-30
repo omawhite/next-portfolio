@@ -77,6 +77,52 @@
   }
 }
 
+@layer components {
+  .postContent > h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+
+  .postContent > h2 {
+    @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 [&:not(:first-child)]:mt-6;
+  }
+
+  .postContent > h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+
+  .postContent > h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+
+  .postContent > p {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+
+  .postContent > blockquote {
+    @apply mt-6 border-l-2 pl-6 italic;
+  }
+
+  .postContent > table {
+    @apply w-full;
+  }
+
+  .postContent > tr {
+    @apply m-0 border-t p-0 even:bg-muted;
+  }
+
+  .postContent > th {
+    @apply border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+  }
+
+  .postContent > ul {
+    @apply my-6 ml-6 list-disc [&>li]:mt-2;
+  }
+
+  .postContent > code {
+    @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+  }
+}
+
 .AvatarRoot {
   display: inline-flex;
   align-items: center;
