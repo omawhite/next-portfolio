@@ -1,16 +1,16 @@
 import React from 'react';
-import Head from 'next/head';
 import { getSortedPostsData } from '../lib/posts';
-import Layout, { siteTitle } from '../components/Layout';
+import Layout from '../components/Layout/LayoutNew';
 import BlogPostsList from '../components/BlogPostList';
+import { generateRSSFeed } from '../lib/feed';
 
 export default function Blog({ allPostsData }) {
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-        <meta name="description" content="A blog by Omar Louis White" />
-      </Head>
+    <Layout
+      shouldAvatarLinkToHome={true}
+      headerText="Blog"
+      documentTitle="Blog"
+    >
       <BlogPostsList postsData={allPostsData} />
     </Layout>
   );
@@ -18,6 +18,8 @@ export default function Blog({ allPostsData }) {
 
 export async function getStaticProps() {
   const allPostsData = await getSortedPostsData();
+  // console.dir(allPostsData); //uncomment if you need to debug feed generation
+  generateRSSFeed(allPostsData);
   return {
     props: {
       allPostsData,

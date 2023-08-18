@@ -14,21 +14,37 @@ collections:
   - name: 'posts'
     label: 'Posts'
     folder: '/posts'
+    preview_path: 'posts/{{slug}}'
     create: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'string',
-          default: 'yyyy-mm-dd',
-        }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - {
           label: 'Last updated',
           name: 'lastUpdated',
-          widget: 'string',
+          widget: 'datetime',
           default: '',
           required: false,
         }
       - { label: 'Description', name: 'description', widget: 'text' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: true }
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'Home Page Content'
+        name: 'home'
+        file: 'content/home.md'
+        fields:
+          - {
+              label: 'Page title',
+              name: 'title',
+              widget: 'string',
+              required: true,
+            }
+          - {
+              label: 'Bio content',
+              name: 'bio',
+              widget: 'markdown',
+              required: true,
+              sanitize_preview: true,
+            }

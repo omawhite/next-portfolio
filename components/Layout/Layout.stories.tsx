@@ -1,21 +1,28 @@
 import React from 'react';
 import Layout from './Layout';
+import { Meta } from '@storybook/react';
 
 export default {
   component: Layout,
   title: 'Templates/Layout',
   argTypes: {
-    home: {
+    showBackToHomeLink: {
       defaultValue: false,
       control: { type: 'boolean' },
     },
   },
-};
+} as Meta<typeof Layout>;
 
-const Template = (args) => (
+interface ArgTypes {
+  home: boolean;
+}
+
+const Template = (args: ArgTypes) => (
   <Layout {...args}>
     <p>This is some content</p>
   </Layout>
 );
 
-export const Default = Template.bind();
+export const Default = {
+  render: Template,
+};

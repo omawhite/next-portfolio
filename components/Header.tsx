@@ -6,7 +6,11 @@ import styles from './Header.module.css';
 
 const name = 'Omar Louis White';
 
-export default function Header({ home }) {
+interface HeaderProps {
+  home: boolean;
+}
+
+export default function Header({ home }: HeaderProps) {
   return (
     <header className={styles.header}>
       {home ? (
@@ -24,16 +28,14 @@ export default function Header({ home }) {
       ) : (
         <>
           <Link href="/">
-            <a>
-              <Image
-                priority
-                src={profilePic}
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt={name}
-              />
-            </a>
+            <Image
+              priority
+              src={profilePic}
+              className={utilStyles.borderCircle}
+              height={108}
+              width={108}
+              alt={name}
+            />
           </Link>
         </>
       )}

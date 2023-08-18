@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import { Meta } from '@storybook/react';
 
 export default {
   component: Header,
@@ -10,8 +11,10 @@ export default {
       control: { type: 'boolean' },
     },
   },
-};
+} as Meta<typeof Header>;
 
-const Template = (args) => <Header {...args} />;
+interface HeaderArgs {
+  home: boolean;
+}
 
-export const Default = Template.bind();
+export const Default = {};

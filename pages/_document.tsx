@@ -1,14 +1,14 @@
-import Head from 'next/head';
+import { Html, Head, Main, NextScript } from 'next/document';
 
-import styles from './Layout.module.css';
-import Link from 'next/link';
-import Header from './Header';
+import { siteTitle } from '@/constants';
+import Script from 'next/script';
+import { isProduction } from '@/featureFlags';
 
-export const siteTitle = `Omar's blog`;
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
-export default function Layout({ children, home }) {
+export default function Document() {
   return (
-    <div className={styles.container}>
+    <Html lang="en">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
@@ -27,15 +27,26 @@ export default function Layout({ children, home }) {
         <meta name="og:site_name" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header home={home} />
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
+      {isProduction && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+          />
+          <Script id="google-analytics">
+            {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', '${gaMeasurementId}');
+        `}
+          </Script>
+        </>
       )}
-    </div>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
   );
 }
