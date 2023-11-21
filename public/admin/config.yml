@@ -24,7 +24,7 @@ collections:
           widget: 'datetime',
           format: 'YYYY-MM-DD',
           date_format: 'YYYY-MM-DD',
-          time_format: false,
+          time_format: 'hh:mm:ss',
         }
       - {
           label: 'Last updated',
@@ -32,7 +32,7 @@ collections:
           widget: 'datetime',
           format: 'YYYY-MM-DD',
           date_format: 'YYYY-MM-DD',
-          time_format: false,
+          time_format: 'hh:mm:ss',
           default: '',
           required: false,
         }
