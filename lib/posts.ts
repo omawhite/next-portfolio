@@ -25,8 +25,8 @@ export function getSortedPostsData() {
       id,
       content: matterResult.content,
       // need to do a json.stringify and parse here for the date fields i think, https://stackoverflow.com/questions/70449092/reason-object-object-date-cannot-be-serialized-as-json-please-only-ret
-      date: JSON.stringify(matterResult.data.date),
-      lastUpdated: JSON.stringify(matterResult.data.lastUpdated),
+      // date: JSON.stringify(matterResult.data.date),
+      // lastUpdated: JSON.stringify(matterResult.data.lastUpdated),
     };
   });
 
