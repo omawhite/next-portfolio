@@ -23,12 +23,16 @@ collections:
           name: 'date',
           widget: 'datetime',
           format: 'YYYY-MM-DD',
+          date_format: 'YYYY-MM-DD',
+          time_format: false,
         }
       - {
           label: 'Last updated',
           name: 'lastUpdated',
           widget: 'datetime',
           format: 'YYYY-MM-DD',
+          date_format: 'YYYY-MM-DD',
+          time_format: false,
           default: '',
           required: false,
         }
