@@ -1,7 +1,7 @@
 ---
 title: Automating My Crate Digging with youtube-dl
-date: 2023-11-21T02:03:16.656Z
-lastUpdated: 2023-11-21T02:03:33.386Z
+date: 
+lastUpdated:
 description: How I automated my sampling workflow with a custom YouTube downloader script
 ---
 Many producers already know this, but for those unaware, Youtube is an amazing place to discover new songs to sample. Over the past few years I've tailored my feed to frequently surface great sampling candidates. The one downside is that actually capturing those samples from Youtube can be tedious. The main options are:
