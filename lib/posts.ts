@@ -1,4 +1,3 @@
-//copied from nextjs tutorial https://nextjs.org/learn/basics/data-fetching/implement-getstaticprops
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -9,7 +8,7 @@ const postsDirectory = path.join(process.cwd(), 'posts');
 export function getSortedPostsData() {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
+  const allPostsData = fileNames.map((fileName: string) => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '');
 
@@ -22,39 +21,24 @@ export function getSortedPostsData() {
 
     // Combine the data with the id
     return {
+      ...matterResult.data,
       id,
       content: matterResult.content,
-      ...matterResult.data,
+      // need to do a json.stringify and parse here for the date fields i think, https://stackoverflow.com/questions/70449092/reason-object-object-date-cannot-be-serialized-as-json-please-only-ret
+      date: JSON.parse(JSON.stringify(matterResult.data.date)),
+      lastUpdated: JSON.parse(JSON.stringify(matterResult.data.lastUpdated)),
     };
   });
+
   // Sort posts by date
-  return allPostsData.sort(({ date: a }, { date: b }) => {
-    if (a < b) {
-      return 1;
-    } else if (a > b) {
-      return -1;
-    } else {
-      return 0;
-    }
+  return allPostsData.sort((a, b) => {
+    return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
   });
 }
 
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
-  // Returns an array that looks like this:
-  // [
-  //   {
-  //     params: {
-  //       id: 'ssg-ssr'
-  //     }
-  //   },
-  //   {
-  //     params: {
-  //       id: 'pre-rendering'
-  //     }
-  //   }
-  // ]
-  return fileNames.map((fileName) => {
+  return fileNames.map((fileName: string) => {
     return {
       params: {
         id: fileName.replace(/\.md$/, ''),
@@ -63,7 +47,7 @@ export function getAllPostIds() {
   });
 }
 
-export async function getPostData(id) {
+export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 
@@ -73,11 +57,10 @@ export async function getPostData(id) {
   // Use remark to convert markdown into HTML string
   const contentHtml = await markdownContentToHTML(matterResult.content);
 
-  // Combine the data with the id
   return {
     id,
     contentHtml,
-    ...matterResult.data,
+    ...(matterResult.data as { date: string }),
   };
 }
 
@@ -86,7 +69,7 @@ export async function getPostData(id) {
 //  * @param {*} markdownContent
 //  * @returns
 //  */
-// export async function markdownContentToHTML(markdownContent) {
+// export async function markdownContentToHTML(markdownContent: string) {
 //   const processedContent = await remark().use(html).process(markdownContent);
 //   return processedContent.toString();
 // }
