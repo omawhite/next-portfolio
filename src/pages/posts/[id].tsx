@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout/LayoutNew';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import { getAllPostIds, getPostData } from '../../src/images/lib/posts';
 import Head from 'next/head';
 import Date from '../../components/Date';
 import Link from 'next/link';
