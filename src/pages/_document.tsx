@@ -1,8 +1,8 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-import { siteTitle } from '@/constants';
+import { siteTitle } from 'src/constants';
 import Script from 'next/script';
-import { isProduction } from '@/featureFlags';
+import { isProduction } from 'src/featureFlags';
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
