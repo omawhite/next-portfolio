@@ -58,6 +58,13 @@
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
   },
+  "overrides": {
+    "decap-cms-app": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "@types/react": "^18.2.0"
+    }
+  },
   "volta": {
     "node": "16.20.1"
   }
