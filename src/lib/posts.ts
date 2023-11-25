@@ -21,7 +21,7 @@ export function getSortedPostsData() {
     const matterData = matterResult.data as {
       date: string;
       title: string;
-      lastUpdated: string;
+      lastUpdated?: string;
       //TODO: change this once I actually adds tags in the cms
       tags?: string[];
     };
@@ -31,7 +31,7 @@ export function getSortedPostsData() {
       id,
       content: matterResult.content,
       date: matterData.date,
-      lastUpdated: matterData.lastUpdated,
+      lastUpdated: matterData.lastUpdated ?? '',
       title: matterData.title,
       //TODO: change this once I actually adds tags in the cms
       tags: matterData.tags ?? [],
