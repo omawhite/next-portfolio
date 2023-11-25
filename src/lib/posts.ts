@@ -18,6 +18,7 @@ export function getSortedPostsData() {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+    //TODO: find a better way to type all your collections
     const matterData = matterResult.data as {
       date: string;
       title: string;
