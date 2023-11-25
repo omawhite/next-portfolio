@@ -1,14 +1,17 @@
-import Script from "next/script";
-import type { FC, PropsWithChildren } from "react";
+import Script from 'next/script';
+import type { FC, PropsWithChildren } from 'react';
 
 export const metadata = {
-  title: "Admin - Next.js Static CMS Blog",
+  title: 'Admin - Next.js Static CMS Blog',
 };
 
 const AdminLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="en">
-      <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async />
+      <Script
+        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        async
+      />
       <body>{children}</body>
     </html>
   );
