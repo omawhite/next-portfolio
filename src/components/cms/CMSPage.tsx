@@ -30,6 +30,7 @@ const CMSPage: FC = () => {
   useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       CMSConfig.local_backend = true;
+      CMSConfig.base_url = 'http://localhost:3000';
     }
 
     CMS.registerPreviewTemplate('posts', PostPreview);
