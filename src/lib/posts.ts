@@ -18,19 +18,29 @@ export function getSortedPostsData() {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+    const matterData = matterResult.data as {
+      date: string;
+      title: string;
+      lastUpdated: string;
+      //TODO: change this once I actually adds tags in the cms
+      tags?: string[];
+    };
 
     // Combine the data with the id
     return {
-      ...matterResult.data,
       id,
       content: matterResult.content,
-      // need to do a json.stringify and parse here for the date fields i think, https://stackoverflow.com/questions/70449092/reason-object-object-date-cannot-be-serialized-as-json-please-only-ret
+      date: matterData.date,
+      lastUpdated: matterData.lastUpdated,
+      title: matterData.title,
+      //TODO: change this once I actually adds tags in the cms
+      tags: matterData.tags ?? [],
+      fullPath,
     };
   });
 
   // Sort posts by date
   return allPostsData.sort((a, b) => {
-    //@ts-expect-error
     return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
   });
 }
