@@ -30,6 +30,7 @@ export function getSortedPostsData() {
 
   // Sort posts by date
   return allPostsData.sort((a, b) => {
+    //@ts-expect-error
     return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
   });
 }
