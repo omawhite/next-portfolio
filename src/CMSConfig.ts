@@ -42,7 +42,7 @@ const CMSConfig: Config = {
         },
         {
           label: 'Content',
-          name: 'content',
+          name: 'body',
           widget: 'markdown',
         },
       ],
