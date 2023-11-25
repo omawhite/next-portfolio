@@ -1,7 +1,7 @@
 ---
 title: Automating My Crate Digging with youtube-dl
-date: 2023-11-20T15:40:06.000-05:00
-lastUpdated: ""
+date: '2023-11-20'
+lastUpdated: ''
 description: How I automated my sampling workflow with a custom YouTube downloader script
 content: >
   Many producers already know this, but for those unaware, Youtube is an amazing
