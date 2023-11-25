@@ -1,5 +1,5 @@
 import { TypographyH2 } from '@/components/shadcn/ui/TypographyH2';
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from '@/styles/utils.module.css';
 import BlogPostSnippet from './BlogPostSnippet';
 import Link from 'next/link';
 
@@ -26,7 +26,7 @@ export default function BlogPostsList({ postsData = [] }: BlogPostsListProps) {
           <BlogPostSnippet key={id} id={id} date={date} title={title} />
         ))}
       </ul>
-      <div className="mt-12 self-start">
+      <div className="self-start mt-12">
         <Link href="/"> ← Back to home </Link>
       </div>
     </section>

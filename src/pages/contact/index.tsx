@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../../components/Layout/LayoutNew';
+import Layout from '@/components/Layout/LayoutNew';
 import { Label } from '@/components/shadcn/ui/label';
 import { Input } from '@/components/shadcn/ui/input';
 import { Textarea } from '@/components/shadcn/ui/textarea';

@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import utilStyles from '../styles/utils.module.css';
-import profilePic from '../images/profile.jpg';
+import utilStyles from '@/styles/utils.module.css';
+import profilePic from '@/images/profile.jpg';
 import Link from 'next/link';
 import styles from './Header.module.css';
 

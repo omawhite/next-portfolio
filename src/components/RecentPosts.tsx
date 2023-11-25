@@ -1,5 +1,5 @@
-import utilStyles from '../styles/utils.module.css';
-import BlogPostSnippet from './BlogPostSnippet';
+import utilStyles from '@/styles/utils.module.css';
+import BlogPostSnippet from '@/components/BlogPostSnippet';
 
 interface PostData {
   id: string;

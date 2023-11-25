@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogPostSnippet from './BlogPostSnippet';
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from '@/styles/utils.module.css';
 import { Meta } from '@storybook/react';
 
 export default {

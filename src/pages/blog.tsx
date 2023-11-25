@@ -1,8 +1,8 @@
 import React from 'react';
-import { getSortedPostsData } from '../src/images/lib/posts';
-import Layout from '../components/Layout/LayoutNew';
-import BlogPostsList from '../components/BlogPostList';
-import { generateRSSFeed } from '../src/images/lib/feed';
+import { getSortedPostsData } from '@/lib/posts';
+import Layout from '@/components/Layout/LayoutNew';
+import BlogPostsList from '@/components/BlogPostList';
+import { generateRSSFeed } from '@/lib/feed';
 
 export default function Blog({ allPostsData }) {
   return (
