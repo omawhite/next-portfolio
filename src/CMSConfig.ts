@@ -5,6 +5,7 @@ const CMSConfig: Config = {
     name: 'git-gateway',
     branch: 'main',
   },
+  publish_mode: 'editorial_workflow',
   site_url: 'https://www.louiswhite.me',
   display_url: 'https://louiswhite.me',
   media_folder: 'public/media',
