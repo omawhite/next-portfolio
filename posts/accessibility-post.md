@@ -1,5 +1,5 @@
 ---
-title: Accessibility post
+title: React, template literals, accessibility, iOS, iOS voiceover
 date: 2023-11-25
 lastUpdated: ""
 description: How working with React and screen readers helped me learn more
