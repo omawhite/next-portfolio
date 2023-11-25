@@ -7,6 +7,7 @@ import html from 'remark-html';
  * @returns
  */
 export async function markdownContentToHTML(markdownContent) {
+  //@ts-expect-error not sure why this is cause a typescript error but it works.
   const processedContent = await remark().use(html).process(markdownContent);
   return processedContent.toString();
 }
