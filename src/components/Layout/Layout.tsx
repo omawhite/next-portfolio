@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import styles from './Layout.module.css';
 import Link from 'next/link';
-import Header from '../Header';
-import { siteTitle } from '@/constants';
+import Header from '@/components/Header';
+import { siteTitle } from 'src/constants';
 
 interface LayoutProps {
   children: React.ReactNode;

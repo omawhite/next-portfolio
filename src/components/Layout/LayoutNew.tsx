@@ -4,7 +4,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from '@/components/shadcn/ui/avatar';
-import { siteTitle } from '@/constants';
+import { siteTitle } from 'src/constants';
 import Head from 'next/head';
 import Link from 'next/link';
 

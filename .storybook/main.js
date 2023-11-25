@@ -1,7 +1,7 @@
 module.exports = {
   stories: [
     // Paths to the story files
-    '../components/**/*.stories.{tsx,js,md,mdx,jsx}',
+    '../src/components/**/*.stories.{tsx,js,md,mdx,jsx}',
   ],
   addons: [
     '@storybook/addon-links',
@@ -11,7 +11,7 @@ module.exports = {
       name: '@storybook/addon-styling',
       options: {},
     },
-    '@storybook/actions',
+    '@storybook/addon-actions',
     '@storybook/addon-interactions',
   ],
   typescript: {

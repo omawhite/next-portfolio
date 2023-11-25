@@ -1,10 +1,10 @@
 import React from 'react';
-import Layout from '../components/Layout/LayoutNew';
-import Bio from '../components/Bio';
-import { getSortedPostsData } from '../lib/posts';
+import Layout from '@/components/Layout/LayoutNew';
+import Bio from '@/components/Bio';
+import { getSortedPostsData } from '@/lib/posts';
 
-import RecentPosts from 'components/RecentPosts';
-import { getHomePageContentData } from 'lib/pageContent';
+import RecentPosts from '@/components/RecentPosts';
+import { getHomePageContentData } from '@/lib/pageContent';
 
 interface HomePageProps {
   allPostsData: any;
