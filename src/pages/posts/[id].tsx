@@ -1,8 +1,8 @@
 import React from 'react';
-import Layout from '../../components/Layout/LayoutNew';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import Layout from '@/components/Layout/LayoutNew';
+import { getAllPostIds, getPostData } from '@/lib/posts';
 import Head from 'next/head';
-import Date from '../../components/Date';
+import Date from '@/components/Date';
 import Link from 'next/link';
 import TypographyH1 from '@/components/shadcn/ui/TypographyH1';
 import TypographyMuted from '@/components/shadcn/ui/TypographyMuted';
@@ -30,7 +30,7 @@ export default function Post({ postData }) {
           className={cn('postContent')}
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
-        <div className="mt-12 self-start">
+        <div className="self-start mt-12">
           <Link href="/blog"> ← Back to blog</Link>
         </div>
       </article>

@@ -1,5 +1,5 @@
-import '../styles/global.css';
-import '../styles/utils.module.css';
+import '@/styles/global.css';
+import '@/styles/utils.module.css';
 
 import { withThemeByClassName } from '@storybook/addon-styling';
 

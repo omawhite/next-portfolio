@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import DateComponent from './Date';
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from '@/styles/utils.module.css';
 
 interface BlogPostSnippetProps {
   id: string;

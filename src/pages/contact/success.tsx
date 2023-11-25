@@ -3,7 +3,7 @@ import Link from 'next/link';
 import TypographyH1 from '@/components/shadcn/ui/TypographyH1';
 import TypographyP from '@/components/shadcn/ui/TypographyP';
 import TypographyMuted from '@/components/shadcn/ui/TypographyMuted';
-import Layout from 'components/Layout/LayoutNew';
+import Layout from 'src/components/Layout/LayoutNew';
 
 const Success: NextPage = () => {
   return (
