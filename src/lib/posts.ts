@@ -62,13 +62,3 @@ export async function getPostData(id: string) {
     ...(matterResult.data as { date: string }),
   };
 }
-
-// /**
-//  * Converts markdown content into an html string for rendering
-//  * @param {*} markdownContent
-//  * @returns
-//  */
-// export async function markdownContentToHTML(markdownContent: string) {
-//   const processedContent = await remark().use(html).process(markdownContent);
-//   return processedContent.toString();
-// }
