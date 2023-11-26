@@ -20,9 +20,9 @@ export function getSortedPostsData() {
     const matterResult = matter(fileContents);
     //TODO: find a better way to type all your collections
     const matterData = matterResult.data as {
-      date: string;
+      date: Date;
       title: string;
-      lastUpdated?: string;
+      lastUpdated?: Date;
       //TODO: change this once I actually adds tags in the cms
       tags?: string[];
     };
@@ -31,8 +31,8 @@ export function getSortedPostsData() {
     return {
       id,
       content: matterResult.content,
-      date: matterData.date,
-      lastUpdated: matterData.lastUpdated ?? '',
+      date: JSON.stringify(matterData.date),
+      lastUpdated: JSON.stringify(matterData.lastUpdated),
       title: matterData.title,
       //TODO: change this once I actually adds tags in the cms
       tags: matterData.tags ?? [],
@@ -63,6 +63,14 @@ export async function getPostData(id: string) {
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
+  //TODO: find a better way to type all your collections
+  const matterData = matterResult.data as {
+    date: Date;
+    title: string;
+    lastUpdated?: Date;
+    //TODO: change this once I actually adds tags in the cms
+    tags?: string[];
+  };
 
   // Use remark to convert markdown into HTML string
   const contentHtml = await markdownContentToHTML(matterResult.content);
@@ -70,6 +78,7 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string }),
+    date: JSON.stringify(matterData.date),
+    lastUpdated: JSON.stringify(matterData.lastUpdated),
   };
 }
