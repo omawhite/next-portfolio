@@ -5,3 +5,5 @@ node_modules/
 public
 storybook-static
 .vscode/
+posts/
+content/
