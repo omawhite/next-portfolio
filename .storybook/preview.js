@@ -15,6 +15,6 @@ export const decorators = [
       light: 'light',
       dark: 'dark',
     },
-    defaultTheme: 'light',
+    defaultTheme: 'dark',
   }),
 ];
