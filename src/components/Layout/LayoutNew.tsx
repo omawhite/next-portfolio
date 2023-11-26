@@ -7,6 +7,7 @@ import {
 import { siteTitle } from 'src/constants';
 import Head from 'next/head';
 import Link from 'next/link';
+import Navbar from '../Navbar';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -26,11 +27,17 @@ export default function Layout({
   documentTitle,
 }: LayoutProps) {
   const title = documentTitle ? `${documentTitle} - ${siteTitle}` : siteTitle;
+  const navbarLinks = [
+    { label: 'Home', href: '/', key: 'home' },
+    { label: 'Blog', href: '/blog', key: 'blog' },
+    { label: 'Contact', href: '/contact', key: 'contact' },
+  ];
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
+      <Navbar links={navbarLinks} />
       {!hideHeader && (
         <header className="p-6 flex flex-col items-center">
           {shouldAvatarLinkToHome ? (
