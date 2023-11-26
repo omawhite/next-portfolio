@@ -31,17 +31,15 @@ interface NavbarProps {
 
 export default function Navbar({ links }: NavbarProps) {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
+    <div className="flex flex-row justify-between items-baselin md:flex">
+      <nav className="space-x-8 self-center flex flex-row items-center">
         {links.map((link) => (
-          <NavigationMenuItem key={link.key}>
-            <NavBarLink href={link.href} label={link.label} />
-          </NavigationMenuItem>
+          <Link href={link.href} key={link.key}>
+            {link.label}
+          </Link>
         ))}
-        <NavigationMenuItem>
-          <ColorModeToggle />
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+      </nav>
+      <ColorModeToggle />
+    </div>
   );
 }
