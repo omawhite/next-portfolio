@@ -32,7 +32,7 @@ export function getSortedPostsData() {
       id,
       content: matterResult.content,
       date: JSON.stringify(matterData.date),
-      lastUpdated: JSON.stringify(matterData.lastUpdated),
+      lastUpdated: JSON.stringify(matterData.lastUpdated) ?? '',
       title: matterData.title,
       //TODO: change this once I actually adds tags in the cms
       tags: matterData.tags ?? [],
@@ -77,8 +77,10 @@ export async function getPostData(id: string) {
 
   return {
     id,
-    contentHtml,
+    title: matterData.title,
+    tags: matterData.tags ?? [],
     date: JSON.stringify(matterData.date),
-    lastUpdated: JSON.stringify(matterData.lastUpdated),
+    lastUpdated: JSON.stringify(matterData.lastUpdated) ?? '',
+    contentHtml,
   };
 }
