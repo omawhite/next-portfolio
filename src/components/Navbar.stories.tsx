@@ -13,9 +13,14 @@ const meta: Meta<typeof Navbar> = {
 export default meta;
 type Story = StoryObj<typeof Navbar>;
 
-export const Primary: Story = {
-  // render: () => <Navbar />,
-  // args: {
-  //   links: [{ label: 'Home', href: '/', key: 'home' }],
-  // },
+export const Primary: Story = {};
+
+export const MultipleLinks: Story = {
+  args: {
+    links: [
+      { label: 'Home', href: '/', key: 'home' },
+      { label: 'Blog', href: '/blog', key: 'blog' },
+      { label: 'Contact', href: '/contact', key: 'contact' },
+    ],
+  },
 };
