@@ -1,7 +1,11 @@
 name: Lighthouse CI for Netlify sites
 on: pull_request
+
+env:
+  LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
+
 jobs:
-  build:
+  lighthouse-pr:
     runs-on: ubuntu-latest
 
     steps:
@@ -11,6 +15,7 @@ jobs:
         id: netlify
         with:
           site_name: 'omars-next-portfolio'
+          max_timeout: 300
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v10
         with:
