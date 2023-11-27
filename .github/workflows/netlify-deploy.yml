@@ -19,17 +19,19 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - run: ls -la
-      - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v2.0
-        with:
-          publish-dir: './.next'
-          production-branch: main
-          production-deploy: ${{github.ref_name == 'main'}}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: ${{ github.event.head_commit.message }}
-          github-deployment-environment: ${{ github.ref_name == 'main' && 'production' || 'preview'}}
-          github-deployment-description: ${{ github.ref_name == 'main' && 'production deployment' || 'deploy preview'}}
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+      - name: netlify deploy
+        run: npm run netlify deploy
+      # - run: ls -la
+      # - name: Deploy to Netlify
+      #   uses: nwtgck/actions-netlify@v2.0
+      #   with:
+      #     publish-dir: './.next'
+      #     production-branch: main
+      #     production-deploy: ${{github.ref_name == 'main'}}
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     deploy-message: ${{ github.event.head_commit.message }}
+      #     github-deployment-environment: ${{ github.ref_name == 'main' && 'production' || 'preview'}}
+      #     github-deployment-description: ${{ github.ref_name == 'main' && 'production deployment' || 'deploy preview'}}
+      #   env:
+      #     NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      #     NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
