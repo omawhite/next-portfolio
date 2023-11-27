@@ -20,7 +20,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: netlify deploy
-        run: npm run netlify deploy
+        run: netlify deploy
       # - run: ls -la
       # - name: Deploy to Netlify
       #   uses: nwtgck/actions-netlify@v2.0
