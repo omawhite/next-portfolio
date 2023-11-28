@@ -24,7 +24,7 @@ jobs:
         run: npm run build
       - name: netlify deploy preview
         if: github.ref_name != 'main'
-        run: netlify deploy --alias ${{github.ref_name}} --message ${{ github.event.head_commit.message }} --dif ./next
+        run: netlify deploy --alias ${{github.ref_name}} --message ${{ github.event.head_commit.message }} --dir ./next
       # - run: ls -la
       # - name: Deploy to Netlify
       #   uses: nwtgck/actions-netlify@v2.0
