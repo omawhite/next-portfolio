@@ -7,7 +7,7 @@ description: A story about how I broke my website and what I did to prevent that
 ---
 A few weeks ago I was out at the library working on some side projects to kill time before heading to a movie at my favorite local [popup theater](https://cicadacinema.com), when I noticed I couldn't reach my blog. When I tried to navigate to my site I was met with the a "Connection timed out" in my browser indicating that Cloudflare was having trouble reaching my site.
 
-![A "Connection timed out" status page from cloudflare](public/media/screenshot-2023-11-19-at-4.23.32-pm.png)
+![A "Connection timed out" status page from cloudflare](/media/screenshot-2023-11-19-at-4.23.32-pm.png)
 
 I had recently moved my DNS from [Namecheap](https://www.namecheap.com/) over to [Cloudflare](https://www.cloudflare.com/application-services/products/dns/) so that I could setup domain names with proper SSL certs for my homelab(if you want to learn more about that check out this [video](https://youtu.be/qlcVx-k-02E?si=rhqwsCoctZ_VYObw)). When I setup DNS for my site I thought it would be a good idea to take advantage of Cloudflare's ability to [proxy dns records](https://developers.cloudflare.com/dns/manage-dns-records/reference/proxied-dns-records/). This feature is great in some contexts, it can speed up your DNS requests due to Cloudflare's caching, hides your IP address from bad actors, and makes you less vulnerable to DDOS attacks, but had unintended consequences in my situation.
 
