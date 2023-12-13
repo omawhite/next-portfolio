@@ -4,8 +4,12 @@ import { Label } from '@/components/shadcn/ui/label';
 import { Input } from '@/components/shadcn/ui/input';
 import { Textarea } from '@/components/shadcn/ui/textarea';
 import { Button } from '@/components/shadcn/ui/button';
+import { isVercel } from '@/featureFlags';
 
 export default function Contact() {
+  if (isVercel) {
+    return <div>Coming soon</div>;
+  }
   return (
     <Layout headerText="Contact me" documentTitle="Contact">
       <section className="flex flex-col justify-center max-w-xl [width:36rem]">
