@@ -16,7 +16,7 @@ interface RecentPostsProps {
 export default function RecentPosts({ postsData = [] }: RecentPostsProps) {
   return (
     <section
-      className={`${utilStyles.headingMd} ${utilStyles.padding1px} [width:36rem]`}
+      className={`${utilStyles.headingMd} ${utilStyles.padding1px} w-full max-w-xl`}
     >
       <h2 className={utilStyles.headingLg}>Recent Posts</h2>
       <ul className={utilStyles.list}>
