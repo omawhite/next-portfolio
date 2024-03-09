@@ -67,7 +67,7 @@ jobs:
       - name: Run lighthouse ci
         run: |
          npm install -g @lhci/cli@0.13.x
-         lhci autorun --upload.target=temporary-public-storage
+         lhci autorun --upload.target=temporary-public-storage --config=./lighthouserc.js
 
   chromatic:
     runs-on: ubuntu-latest
