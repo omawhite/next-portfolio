@@ -10,7 +10,17 @@ export default function Contact() {
       <section className="flex flex-col justify-center max-w-xl [width:36rem]">
         <>
           {isVercel ? (
-            <div>Coming soon</div>
+            <form action="https://api.web3forms.com/submit" method="POST">
+              {/* <!-- Replace with your Access Key --> */}
+              <input
+                type="hidden"
+                name="access_key"
+                value="efc28ee6-267b-4e1b-852e-680f9ce6d9b6"
+              ></input>
+              <ContactFormInputs />
+              {/* <!-- hCaptcha Spam Protection --> */}
+              <div className="h-captcha" data-captcha="true"></div>
+            </form>
           ) : (
             <form
               name="contact"
