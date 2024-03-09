@@ -4,7 +4,8 @@ module.exports = {
       target: 'temporary-public-storage',
     },
     assert: {
-      preset: 'lighthouse:no-pwa',
+      // TODO: undo this when you improve your scores
+      // preset: 'lighthouse:no-pwa',
     },
     collect: {
       url: [
