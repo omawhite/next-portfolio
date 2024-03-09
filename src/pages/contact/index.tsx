@@ -12,7 +12,7 @@ export default function Contact() {
   }
   return (
     <Layout headerText="Contact me" documentTitle="Contact">
-      <section className="flex flex-col justify-center max-w-xl [width:36rem]">
+      <section className="flex flex-col justify-center max-w-xl">
         <form
           name="contact"
           autoComplete="on"
