@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "",
+    "serve:lhci": "NODE_ENV=production npm run start",
     "cms-proxy-server": "npx @staticcms/proxy-server",
     "format:write": "prettier --write .",
     "format:check": "prettier --check .",
