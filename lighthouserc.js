@@ -7,7 +7,7 @@ module.exports = {
       preset: 'lighthouse:no-pwa',
     },
     collect: {
-      serverStartCommand: 'npm run start',
+      startServerCommand: 'npm run start',
     },
   },
 };
