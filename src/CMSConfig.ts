@@ -2,7 +2,8 @@ import type { Config } from '@staticcms/core';
 
 const CMSConfig: Config = {
   backend: {
-    name: 'git-gateway',
+    name: 'github',
+    repo: 'omawhite/next-portfolio',
     branch: 'main',
   },
   publish_mode: 'editorial_workflow',
