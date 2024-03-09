@@ -4,7 +4,7 @@ interface BioProps {
 
 export default function Bio({ bio }: BioProps) {
   return (
-    <section className="max-w-xl">
+    <section className="max-w-xl w-full">
       <div className="postContent" dangerouslySetInnerHTML={{ __html: bio }} />
     </section>
   );
