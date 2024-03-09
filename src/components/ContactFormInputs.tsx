@@ -1,23 +1,10 @@
-import { Button } from '@/components/shadcn/ui/button';
-import { Input } from '@/components/shadcn/ui/input';
 import { Label } from '@/components/shadcn/ui/label';
+import { Input } from '@/components/shadcn/ui/input';
 import { Textarea } from '@/components/shadcn/ui/textarea';
 
-interface ContactFormProps {
-  onSubmit?: (event: React.FormEvent<HTMLFormElement>) => void;
-}
-
-export default function ContactForm({ onSubmit }: ContactFormProps) {
+export default function ContactFormInputs() {
   return (
-    <form
-      name="contact"
-      autoComplete="on"
-      method="POST"
-      action="/contact/success"
-      data-netlify="true"
-      className="flex flex-col gap-3"
-      onSubmit={onSubmit}
-    >
+    <>
       <input type="hidden" name="form-name" value="contact" />
       <div>
         <Label htmlFor="name" className="label">
@@ -70,9 +57,6 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           spellCheck="true"
         />
       </div>
-      <Button type="submit" className="self-start">
-        Send
-      </Button>
-    </form>
+    </>
   );
 }

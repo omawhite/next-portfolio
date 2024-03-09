@@ -1,82 +1,42 @@
 import React from 'react';
 import Layout from '@/components/Layout/LayoutNew';
-import { Label } from '@/components/shadcn/ui/label';
-import { Input } from '@/components/shadcn/ui/input';
-import { Textarea } from '@/components/shadcn/ui/textarea';
 import { Button } from '@/components/shadcn/ui/button';
 import { isVercel } from '@/featureFlags';
+import ContactFormInputs from '@/components/ContactFormInputs';
 
 export default function Contact() {
-  if (isVercel) {
-    return <div>Coming soon</div>;
-  }
   return (
     <Layout headerText="Contact me" documentTitle="Contact">
       <section className="flex flex-col justify-center max-w-xl w-full">
-        <form
-          name="contact"
-          autoComplete="on"
-          method="POST"
-          action="/contact/success"
-          data-netlify="true"
-          className="flex flex-col gap-3"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <div>
-            <Label htmlFor="name" className="label">
-              Name:
-            </Label>
-            <Input
-              className="input"
-              type="text"
-              name="name"
-              id="name"
-              required
-              placeholder="John Doe"
-            />
-          </div>
-          <div>
-            <Label htmlFor="email" className="label">
-              Email:
-            </Label>
-            <Input
-              className="input"
-              type="email"
-              name="email"
-              id="email"
-              required
-              placeholder="yourname@yoursite.com"
-            />
-          </div>
-          <div>
-            <Label htmlFor="subject" className="label">
-              Subject:
-            </Label>
-            <Input
-              className="input"
-              type="text"
-              name="subject"
-              id="subject"
-              placeholder="What do you want to talk about?"
-            />
-          </div>
-          <div>
-            <Label htmlFor="message" className="label">
-              Your message:
-            </Label>
-            <Textarea
-              className="textarea"
-              id="message"
-              name="message"
-              required
-              placeholder={`What do you want to say?`}
-              spellCheck="true"
-            />
-          </div>
-          <Button type="submit" className="self-start">
-            Send
-          </Button>
-        </form>
+        <>
+          {isVercel ? (
+            <form action="https://api.web3forms.com/submit" method="POST">
+              {/* <!-- Replace with your Access Key --> */}
+              <input
+                type="hidden"
+                name="access_key"
+                value="efc28ee6-267b-4e1b-852e-680f9ce6d9b6"
+              ></input>
+              <ContactFormInputs />
+              {/* <!-- hCaptcha Spam Protection --> */}
+              <div className="h-captcha" data-captcha="true"></div>
+            </form>
+          ) : (
+            <form
+              name="contact"
+              autoComplete="on"
+              method="POST"
+              action="/contact/success"
+              data-netlify="true"
+              className="flex flex-col gap-3"
+            >
+              <ContactFormInputs />
+              <Button type="submit" className="self-start">
+                Send
+              </Button>
+            </form>
+          )}
+        </>
       </section>
     </Layout>
   );
