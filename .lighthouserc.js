@@ -3,10 +3,10 @@ module.exports = {
     upload: {
       target: 'temporary-public-storage',
     },
-    assert: {
-      // TODO: undo this when you improve your scores
-      // preset: 'lighthouse:no-pwa',
-    },
+    // TODO: undo this when you improve your scores
+    // assert: {
+    //   preset: 'lighthouse:no-pwa',
+    // },
     collect: {
       url: [
         'http://localhost:3000/',
