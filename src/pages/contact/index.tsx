@@ -7,7 +7,7 @@ import ContactFormInputs from '@/components/ContactFormInputs';
 export default function Contact() {
   return (
     <Layout headerText="Contact me" documentTitle="Contact">
-      <section className="flex flex-col justify-center max-w-xl [width:36rem]">
+      <section className="flex flex-col justify-center max-w-xl w-full">
         <>
           {isVercel ? (
             <form action="https://api.web3forms.com/submit" method="POST">
