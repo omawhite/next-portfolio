@@ -53,6 +53,8 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    env:
+      LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
     steps:
       - uses: actions/checkout@v3
       - name: Setup Node
@@ -67,7 +69,8 @@ jobs:
       - name: Run lighthouse ci
         run: |
          npm install -g @lhci/cli@0.13.x
-         lhci autorun --upload.target=temporary-public-storage --config=./lighthouserc.js
+         lhci autorun
+
 
   chromatic:
     runs-on: ubuntu-latest
