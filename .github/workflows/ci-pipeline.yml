@@ -6,16 +6,21 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  NODE_VERSION: 16
+  PACKAGE_MANAGER: 'npm'
+
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: 'npm'
+          node-version: ${{ env.NODE_VERSION }}
+          cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependecies
         run: npm install
       - run: npm run lint
@@ -23,40 +28,63 @@ jobs:
   prettier:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: 'npm'
-      - name: 'Install dependecies'
+          node-version: ${{ env.NODE_VERSION }}
+          cache: ${{ env.PACKAGE_MANAGER }}
+      - name: Install dependencies
         run: npm install
       - run: npm run format:check
 
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: 'npm'
-      - name: 'Install dependecies'
+          node-version: ${{ env.NODE_VERSION }}
+          cache: ${{ env.PACKAGE_MANAGER }}
+      - name: Install dependencies
         run: npm install
       - run: npm run test
+
+  build:
+    runs-on: ubuntu-latest
+    env:
+      LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: ${{ env.PACKAGE_MANAGER }}
+      - name: Install dependencies
+        run: npm install
+      - name: build
+        run: npm run build
+      - name: Run lighthouse ci
+        run: |
+         npm install -g @lhci/cli@0.13.x
+         lhci autorun
+
 
   chromatic:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: 'npm'
+          node-version: ${{ env.NODE_VERSION }}
+          cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependecies
         run: npm install
       - name: Publish to Chromatic
