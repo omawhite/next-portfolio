@@ -3,6 +3,7 @@
 
 import '@/styles/global.css';
 import ThemeProvider from '@/components/ThemeProvider';
+import { Analytics } from '@vercel/analytics/react';
 import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
@@ -14,6 +15,7 @@ export default function App({ Component, pageProps }) {
       <ThemeProvider attribute="class" defaultTheme="system">
         <Component {...pageProps} />
       </ThemeProvider>
+      <Analytics />
     </>
   );
 }
