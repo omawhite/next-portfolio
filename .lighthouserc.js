@@ -1,8 +1,5 @@
 module.exports = {
   ci: {
-    // upload: {
-    //   target: 'temporary-public-storage',
-    // },
     // TODO: undo this when you improve your scores
     // assert: {
     //   preset: 'lighthouse:no-pwa',
