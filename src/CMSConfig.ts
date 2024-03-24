@@ -5,6 +5,8 @@ const CMSConfig: Config = {
     name: 'github',
     repo: 'omawhite/next-portfolio',
     branch: 'main',
+    base_url: 'https://www.louiswhite.me/',
+    auth_endpoint: 'api/auth',
   },
   publish_mode: 'editorial_workflow',
   site_url: 'https://www.louiswhite.me',
