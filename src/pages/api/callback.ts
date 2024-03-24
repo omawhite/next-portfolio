@@ -25,7 +25,17 @@ export default async function handler(
   const code = req.query.code;
   const { host } = req.headers;
 
-  const oauthClient = new AuthorizationCode(config);
+  const oauthClient = new AuthorizationCode({
+    client: {
+      id: process.env.OAUTH_CLIENT_ID,
+      secret: process.env.OAUTH_CLIENT_SECRET,
+    },
+    auth: {
+      tokenHost: `https://github.com`,
+      tokenPath: `/login/oauth/access_token`,
+      authorizePath: `/login/oauth/authorize`,
+    },
+  });
 
   try {
     const accessToken = await oauthClient.authorizationCode.getToken({
