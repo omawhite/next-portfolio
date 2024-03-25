@@ -40,7 +40,7 @@ export default async function handler(
   try {
     const accessToken = await oauthClient.authorizationCode.getToken({
       code,
-      redirect_uri: `https://${host}/admin`,
+      redirect_uri: `https://${host}/api/callback`,
     });
     const { token } = oauthClient.accessToken.create(accessToken);
 
