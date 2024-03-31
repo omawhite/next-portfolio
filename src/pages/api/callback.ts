@@ -17,11 +17,11 @@ export default async function handler(
       scope: `repo,user`,
     });
 
-    const { token } = oauthClient.createToken(accessToken);
+    // const { token } = oauthClient.createToken(accessToken);
 
     res.status(200).send(
       renderBody('success', {
-        token: token.access_token,
+        token: accessToken.token,
         provider: 'github',
       })
     );
