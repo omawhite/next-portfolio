@@ -1,6 +1,6 @@
 import CMS from '@staticcms/core';
-import { useEffect } from 'react';
 import '@staticcms/core/dist/main.css';
+import { useEffect } from 'react';
 
 import CMSConfig from '@/CMSConfig';
 
@@ -28,11 +28,19 @@ const PostPreview: FC<TemplatePreviewProps<PostData>> = ({
 
 const CMSPage: FC = () => {
   useEffect(() => {
+    //Exit early if CMS stuff is already registered
+    const root = document.getElementById('cms-root');
+    if (root) {
+      return;
+    }
+
+    //Handle if we are in development mode
     if (process.env.NODE_ENV === 'development') {
       CMSConfig.local_backend = true;
       CMSConfig.base_url = 'http://localhost:3000';
     }
 
+    //Register CMS stuff
     CMS.registerPreviewTemplate('posts', PostPreview);
 
     CMS.registerAdditionalLink({
