@@ -14,6 +14,7 @@ export default async function handler(
     const accessToken = await oauthClient.getToken({
       code,
       redirect_uri: `https://${host}/api/callback`,
+      scope: `repo,user`,
     });
 
     res.status(200).send(
