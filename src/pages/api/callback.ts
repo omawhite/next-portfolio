@@ -19,7 +19,7 @@ export default async function handler(
 
     res.status(200).send(
       renderBody('success', {
-        token: accessToken,
+        token: accessToken.token,
         provider: 'github',
       })
     );
