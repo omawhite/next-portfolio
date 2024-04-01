@@ -2,8 +2,8 @@ import { AuthorizationCode } from 'simple-oauth2';
 
 export const config = {
   client: {
-    id: process.env.OAUTH_CLIENT_ID,
-    secret: process.env.OAUTH_CLIENT_SECRET,
+    id: process.env.GITHUB_ID,
+    secret: process.env.GITHUB_SECRET,
   },
   auth: {
     tokenHost: `https://github.com`,
