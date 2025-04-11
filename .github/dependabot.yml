@@ -4,10 +4,28 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'weekly'
+      interval: 'daily'
+    groups:
+      nextjs:
+        patterns:
+          - 'next'
+          - '@next/*'
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - '@react/*'
+      storybook:
+        patterns:
+          - 'storybook'
+          - '@storybook/*'
+      minor-and-patch:
+        update-types:
+          - 'minor'
+          - 'patch'
 
   # Keep GitHub Actions up-to-date
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'weekly'
+      interval: 'daily'
