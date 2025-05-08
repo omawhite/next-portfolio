@@ -4,7 +4,8 @@ import '@/styles/utils.module.css';
 import { withThemeByClassName } from '@storybook/addon-styling';
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  //the migration told me not to do this
+  // actions: { argTypesRegex: '^on[A-Z].*' },
 };
 
 export const decorators = [
@@ -18,3 +19,4 @@ export const decorators = [
     defaultTheme: 'light',
   }),
 ];
+export const tags = ['autodocs'];
