@@ -13,6 +13,7 @@ module.exports = {
     },
     '@storybook/addon-actions',
     '@storybook/addon-interactions',
+    '@chromatic-com/storybook',
   ],
   typescript: {
     check: false,
@@ -29,8 +30,6 @@ module.exports = {
     name: '@storybook/nextjs',
     options: {},
   },
-  docs: {
-    autodocs: true,
-  },
+  docs: {},
   staticDirs: ['../public'],
 };
