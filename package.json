@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "",
+    "deploy": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
     "serve:lhci": "NODE_ENV=production npm run start",
     "cms-proxy-server": "npx @staticcms/proxy-server",
     "format:write": "prettier --write .",
