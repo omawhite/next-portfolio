@@ -13,7 +13,7 @@ module.exports = {
     },
     '@storybook/addon-actions',
     '@storybook/addon-interactions',
-    '@chromatic-com/storybook'
+    '@chromatic-com/storybook',
   ],
   typescript: {
     check: false,
