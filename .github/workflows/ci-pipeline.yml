@@ -114,4 +114,5 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           autoAcceptChanges: 'main'
           onlyChanged: true
-          buildScriptName: 'turbo storybook:build'
+          workingDir: apps/portfolio
+          buildScriptName: 'storybook:build'
