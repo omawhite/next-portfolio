@@ -18,6 +18,7 @@ out/
 
 # ignore rss feed
 public/rss.xml
+rss.xml
 public/feed.json
 
 # misc
