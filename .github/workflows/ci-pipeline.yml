@@ -18,13 +18,12 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          # version: 10
           run_install: false
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          # cache: ${{ env.PACKAGE_MANAGER }}
+          cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependecies
         run: pnpm install
       - run: pnpm lint
@@ -36,13 +35,12 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          # version: 10
           run_install: false
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          # cache: ${{ env.PACKAGE_MANAGER }}
+          cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependencies
         run: pnpm install
       - run: pnpm format:check
@@ -54,13 +52,12 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          # version: 10
           run_install: false
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          # cache: ${{ env.PACKAGE_MANAGER }}
+          cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependencies
         run: pnpm install
       - run: pnpm test
@@ -77,7 +74,6 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          # version: 10
           run_install: false
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -102,7 +98,6 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          # version: 10
           run_install: false
       - name: Setup Node
         uses: actions/setup-node@v4
