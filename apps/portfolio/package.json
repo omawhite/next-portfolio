@@ -12,7 +12,10 @@
     "serve:lhci": "NODE_ENV=production npm run start",
     "cms-proxy-server": "npx @staticcms/proxy-server",
     "format:write": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "serve:storybook": "npm run storybook:build && npx serve -s storybook-static"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
