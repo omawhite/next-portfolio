@@ -92,7 +92,7 @@ jobs:
       - name: Run lighthouse ci
         run: |
          npm install -g @lhci/cli@0.13.x
-         lhci autorun --upload.token=${{ secrets.LHCI_BUILD_TOKEN }} --upload.serverBaseUrl=${{ secrets.LHCI_SERVER_BASE_URL}}
+         lhci autorun --upload.token=${{ secrets.LHCI_BUILD_TOKEN }} --upload.serverBaseUrl=${{ secrets.LHCI_SERVER_BASE_URL}} --config=apps/portfolio/.lighthouserc.js
 
 
   chromatic:
