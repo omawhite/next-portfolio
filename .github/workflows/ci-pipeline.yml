@@ -27,8 +27,8 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           # cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependecies
-        run: npm install
-      - run: npm run lint
+        run: pnpm install
+      - run: pnpm lint
 
   prettier:
     runs-on: ubuntu-latest
@@ -45,8 +45,8 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           # cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependencies
-        run: npm install
-      - run: npm run format:check
+        run: pnpm install
+      - run: pnpm format:check
 
   test:
     runs-on: ubuntu-latest
@@ -63,8 +63,8 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           # cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependencies
-        run: npm install
-      - run: npm run test
+        run: pnpm install
+      - run: pnpm test
 
   build:
     runs-on: ubuntu-latest
@@ -86,9 +86,9 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
       - name: build
-        run: npm run build
+        run: pnpm build
       - name: Run lighthouse ci
         run: |
          npm install -g @lhci/cli@0.13.x
@@ -107,7 +107,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: ${{ env.PACKAGE_MANAGER }}
       - name: Install dependecies
-        run: npm install
+        run: pnpm install
       - name: Publish to Chromatic
         uses: chromaui/action@v11
         # Chromatic GitHub Action options
