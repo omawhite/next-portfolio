@@ -1,22 +1,24 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+node_modules
+node_modules
 /.pnp
 .pnp.js
 
 # testing
-/coverage
+coverage
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 
 # production
 /build
 
 # ignore rss feed
 public/rss.xml
+rss.xml
 public/feed.json
 
 # misc
@@ -37,3 +39,6 @@ yarn-error.log*
 #storybook
 storybook-static
 build-storybook.log
+
+#turborepo
+.turbo

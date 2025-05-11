@@ -10,7 +10,7 @@ module.exports = {
         'http://localhost:3000/contact',
         'http://localhost:3000/blog',
       ],
-      startServerCommand: 'npm run start',
+      startServerCommand: 'pnpm turbo start',
     },
   },
 };
