@@ -10,7 +10,6 @@ env:
   NODE_VERSION: 20
   PACKAGE_MANAGER: 'pnpm'
 
-
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -91,9 +90,8 @@ jobs:
         run: pnpm build
       - name: Run lighthouse ci
         run: |
-         npm install -g @lhci/cli@0.13.x
-         lhci autorun --upload.token=${{ secrets.LHCI_BUILD_TOKEN }} --upload.serverBaseUrl=${{ secrets.LHCI_SERVER_BASE_URL}} --config=apps/portfolio/.lighthouserc.js
-
+          npm install -g @lhci/cli@0.13.x
+          lhci autorun --upload.token=${{ secrets.LHCI_BUILD_TOKEN }} --upload.serverBaseUrl=${{ secrets.LHCI_SERVER_BASE_URL}} --config=apps/portfolio/.lighthouserc.js
 
   chromatic:
     runs-on: ubuntu-latest
@@ -101,6 +99,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 👈 Required to retrieve git history
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          # version: 10
+          run_install: false
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
