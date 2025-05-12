@@ -18,6 +18,9 @@ export default function Contact() {
                 value="efc28ee6-267b-4e1b-852e-680f9ce6d9b6"
               ></input>
               <ContactFormInputs />
+              <Button type="submit" className="self-start">
+                Send
+              </Button>
               {/* <!-- hCaptcha Spam Protection --> */}
               <div className="h-captcha" data-captcha="true"></div>
             </form>
