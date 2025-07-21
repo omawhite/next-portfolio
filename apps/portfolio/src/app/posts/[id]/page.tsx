@@ -49,6 +49,7 @@ export default async function PostPage({ params }: PostPageProps) {
         </TypographyMuted>
         <div
           className={cn('postContent')}
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: just trust me bro
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
         <div className="self-start mt-12">
