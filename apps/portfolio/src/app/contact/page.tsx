@@ -25,6 +25,9 @@ export default function ContactPage() {
             <ContactFormInputs />
             {/* <!-- hCaptcha Spam Protection --> */}
             <div className="h-captcha" data-captcha="true" />
+            <Button type="submit" className="self-start">
+              Send
+            </Button>
           </form>
         ) : (
           <form
