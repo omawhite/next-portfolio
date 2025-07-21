@@ -2,9 +2,7 @@
 	"name": "ui",
 	"type": "module",
 	"private": true,
-	"scripts": {
-		"build": "tsc"
-	},
+	"scripts": {},
 	"exports": {
 		"./*": "./*"
 	},
