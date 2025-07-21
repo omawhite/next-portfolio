@@ -25,7 +25,7 @@ export default function ContactPage() {
             <ContactFormInputs />
             {/* <!-- hCaptcha Spam Protection --> */}
             <div className="h-captcha" data-captcha="true" />
-            <Button type="submit" className="self-start">
+            <Button type="submit" className="self-start mt-4">
               Send
             </Button>
           </form>
@@ -39,7 +39,7 @@ export default function ContactPage() {
             className="flex flex-col gap-3"
           >
             <ContactFormInputs />
-            <Button type="submit" className="self-start">
+            <Button type="submit" className="self-start mt-4">
               Send
             </Button>
           </form>
