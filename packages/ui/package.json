@@ -1,0 +1,16 @@
+{
+	"name": "ui",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "tsc --watch",
+		"build": "tsc"
+	},
+	"exports": {
+		"./*": "./*"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "latest"
+	}
+}
