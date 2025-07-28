@@ -9,9 +9,9 @@ import TypographyMuted from '@/components/shadcn/ui/TypographyMuted';
 import { cn } from '@/lib/utils';
 
 interface PostPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -24,7 +24,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
-  const postData = await getPostData(params.id);
+  const { id } = await params;
+  const postData = await getPostData(id);
 
   return {
     title: postData.title,
@@ -38,7 +39,8 @@ export async function generateMetadata({
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const postData = await getPostData(params.id);
+  const { id } = await params;
+  const postData = await getPostData(id);
 
   return (
     <LayoutApp shouldAvatarLinkToHome={true} hideHeaderText={true}>
