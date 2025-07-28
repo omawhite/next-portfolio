@@ -11,7 +11,7 @@ module.exports = {
         'http://localhost:3000/blog',
       ],
       startServerCommand:
-        'HOSTNAME=localhost pnpm turbo start --filter=next_porfolio',
+        'HOSTNAME=localhost pnpm turbo start --filter=next_portfolio',
     },
   },
 };
