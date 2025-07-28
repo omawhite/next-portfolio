@@ -4,8 +4,6 @@ I'm using [Upptime](https://upptime.js.org) to monitor my deployed site you can 
 
 ## CMS
 
-I can access my CMS from [here](https://www.louiswhite.me/admin/#/)
-
 ## Documentation
 
 Next js docs: <https://nextjs.org/docs>
