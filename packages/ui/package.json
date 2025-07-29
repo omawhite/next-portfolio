@@ -1,0 +1,13 @@
+{
+	"name": "ui",
+	"type": "module",
+	"private": true,
+	"scripts": {},
+	"exports": {
+		"./*": "./*"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "latest"
+	}
+}
