@@ -12,6 +12,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
+
 export const metadata: Metadata = {
   title: {
     template: '%s - Omar White',
@@ -19,7 +25,6 @@ export const metadata: Metadata = {
   },
   description: 'A site by Omar Louis White',
   keywords: '',
-  viewport: 'width=device-width, initial-scale=1.0',
   openGraph: {
     title: siteTitle,
     description: 'A site by Omar Louis White',
