@@ -88,44 +88,67 @@ export default defineConfig({
             return `/${document._sys.filename}`;
           },
         },
-        fields: [
+        templates: [
           {
-            type: 'string',
-            name: 'title',
-            label: 'Title',
-            required: true,
-          },
-          {
-            type: 'string',
-            name: 'description',
-            label: 'Description',
-          },
-          {
-            type: 'object',
-            name: 'blocks',
-            label: 'Blocks',
-            list: true,
-            templates: [
+            name: 'home',
+            label: 'Home',
+            fields: [
               {
-                name: 'bio',
-                label: 'Bio',
-                fields: [
+                type: 'string',
+                name: 'title',
+                label: 'Title',
+                required: true,
+              },
+              {
+                type: 'string',
+                name: 'description',
+                label: 'Description',
+              },
+              {
+                type: 'object',
+                name: 'blocks',
+                label: 'Blocks',
+                list: true,
+                templates: [
                   {
-                    type: 'rich-text',
-                    name: 'text',
-                    label: 'Text',
+                    name: 'bio',
+                    label: 'Bio',
+                    fields: [
+                      {
+                        type: 'rich-text',
+                        name: 'text',
+                        label: 'Text',
+                      },
+                    ],
                   },
                 ],
               },
             ],
           },
           {
-            type: 'rich-text',
-            name: 'body',
-            label: 'Body',
-            isBody: true,
-          },
-        ],
+            name: 'generic',
+            label: 'Generic Page',
+            fields: [
+              {
+                type: 'string',
+                name: 'title',
+                label: 'Title',
+                required: true,
+              },
+              {
+                type: 'string',
+                name: 'description',
+                label: 'Description',
+              },
+              {
+                type: 'rich-text',
+                name: 'body',
+                label: 'Body',
+                isBody: true,
+              },
+            ],
+          }
+        ]
       },
     ],
   },

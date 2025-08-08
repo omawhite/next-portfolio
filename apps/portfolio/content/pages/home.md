@@ -1,5 +1,5 @@
 ---
-title: home
+title: Home
 description: Home page
 blocks:
   - text: >
@@ -9,6 +9,6 @@ blocks:
       about tech or working with me on a project? [Reach out to me
       here.](/contact)
     _template: bio
+_template: home
 ---
 
-This is some body text
