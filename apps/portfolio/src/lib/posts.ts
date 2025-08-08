@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { markdownContentToHTML } from './markdown';
 
-const postsDirectory = path.join(process.cwd(), 'posts');
+const postsDirectory = path.join(process.cwd(), 'content', 'posts');
 
 export function getSortedPostsData() {
   // Get file names under /posts

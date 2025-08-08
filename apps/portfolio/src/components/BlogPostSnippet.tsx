@@ -4,7 +4,7 @@ import utilStyles from '@/styles/utils.module.css';
 
 interface BlogPostSnippetProps {
   id: string;
-  date: string;
+  date?: string;
   title: string;
 }
 
@@ -17,9 +17,11 @@ export default function BlogPostSnippet({
     <li className={utilStyles.listItem} key={id}>
       <Link href={`/posts/${id}`}>{title}</Link>
       <br />
-      <small className={utilStyles.lightText}>
-        <DateComponent dateString={date} />
-      </small>
+      {date && (
+        <small className={utilStyles.lightText}>
+          <DateComponent dateString={date} />
+        </small>
+      )}
     </li>
   );
 }
