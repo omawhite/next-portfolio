@@ -1,5 +1,7 @@
 ---
-title: Hello, World!
+title: 'Hello, World!'
+date: 2025-08-07T04:00:00.000Z
+description: The demo page that tina added to this site
 ---
 
 ## Hello World!
