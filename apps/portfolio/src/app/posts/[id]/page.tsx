@@ -48,7 +48,6 @@ export async function generateMetadata({
 
 export default async function PostPage({ params }: PostPageProps) {
   const { id } = await params;
-  // const postData = await getPostData(id);
   const post = await client.queries.post({relativePath: `${id}.md`})
   const postData = post.data.post;
 

@@ -5,6 +5,8 @@ import { getSortedPostsData } from '@/lib/posts';
 import RecentPosts from '@/components/RecentPosts';
 import { getHomePageContentData } from '@/lib/pageContent';
 
+export const revalidate = 3600 // invalidate every hour
+
 export async function generateMetadata(): Promise<Metadata> {
   const { pageTitle } = await getHomePageContentData();
 
