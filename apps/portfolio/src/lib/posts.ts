@@ -45,4 +45,3 @@ export function getSortedPostsData() {
     return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
   });
 }
-
