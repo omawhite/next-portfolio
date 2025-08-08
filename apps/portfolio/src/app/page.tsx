@@ -3,15 +3,15 @@ import type { Metadata } from 'next';
 import LayoutApp from '@/components/Layout/LayoutApp';
 import { getSortedPostsData } from '@/lib/posts';
 import RecentPosts from '@/components/RecentPosts';
-import { getHomePageContentData } from '@/lib/pageContent';
 import client from 'tina/__generated__/client';
-import { Home } from 'lucide-react';
 import HomePageComponent from './HomePage';
 
 export const revalidate = 3600; // invalidate every hour
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { pageTitle } = await getHomePageContentData();
+  // const { pageTitle } = await getHomePageContentData();
+  const result = await client.queries.page({ relativePath: 'home.md' });
+  const pageTitle = result.data.page?.title || 'Home';
 
   return {
     title: pageTitle,
@@ -21,8 +21,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function HomePage() {
   const allPostsData = await getSortedPostsData();
-  const { pageTitle, contentHtml } = await getHomePageContentData();
   const result = await client.queries.page({ relativePath: 'home.md' });
+  const pageTitle = result.data.page?.title || 'Home';
 
   return (
     <LayoutApp headerText={pageTitle}>
