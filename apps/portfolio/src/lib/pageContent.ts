@@ -15,16 +15,10 @@ export async function getHomePageContentData() {
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
-  const bioContentHtml = await markdownContentToHTML(
-    matterResult.data.bio || ''
-  );
-
-  //Uncomment to debug
-  // console.log('matterResult', matterResult)
-  // console.log('bioContentHtml', bioContentHtml)
+  const contentHtml = await markdownContentToHTML(matterResult.content || '');
 
   return {
     pageTitle: matterResult.data.title,
-    bioContentHtml,
+    contentHtml,
   };
 }
