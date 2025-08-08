@@ -1,12 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import LayoutApp from '@/components/Layout/LayoutApp';
-import { getAllPostIds, getPostData } from '@/lib/posts';
-import DateComponent from '@/components/Date';
-import Link from 'next/link';
-import TypographyH1 from '@/components/shadcn/ui/TypographyH1';
-import TypographyMuted from '@/components/shadcn/ui/TypographyMuted';
-import { cn } from '@/lib/utils';
+import client from 'tina/__generated__/client';
+import PostPageComponent from './PostPageComponent';
 
 interface PostPageProps {
   params: Promise<{
@@ -14,10 +9,18 @@ interface PostPageProps {
   }>;
 }
 
+export const revalidate = 3600; // invalidate every hour
+
 export async function generateStaticParams() {
-  const paths = getAllPostIds();
+  const postsResponse = await client.queries.postConnection();
+  const edges = postsResponse.data.postConnection.edges || [];
+  const paths = edges
+    .map((edge) => {
+      return edge?.node?._sys.filename;
+    })
+    .filter((filename): filename is string => typeof filename === 'string');
   return paths.map((path) => ({
-    id: path.params.id,
+    id: path,
   }));
 }
 
@@ -25,14 +28,15 @@ export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
   const { id } = await params;
-  const postData = await getPostData(id);
+  const post = await client.queries.post({ relativePath: `${id}.md` });
+  const postData = post.data.post;
 
   return {
     title: postData.title,
-    description: 'Blog post',
+    description: postData.description,
     openGraph: {
       title: postData.title,
-      description: 'Blog post',
+      description: postData.description,
       type: 'article',
     },
   };
@@ -40,24 +44,8 @@ export async function generateMetadata({
 
 export default async function PostPage({ params }: PostPageProps) {
   const { id } = await params;
-  const postData = await getPostData(id);
+  const relativePath = `${id}.md`;
+  const result = await client.queries.post({ relativePath });
 
-  return (
-    <LayoutApp shouldAvatarLinkToHome={true} hideHeaderText={true}>
-      <article className="max-w-xl">
-        <TypographyH1 className="mb-4">{postData.title}</TypographyH1>
-        <TypographyMuted>
-          <DateComponent dateString={postData.date} />
-        </TypographyMuted>
-        <div
-          className={cn('postContent')}
-          // biome-ignore lint/security/noDangerouslySetInnerHtml: just trust me bro
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-        />
-        <div className="self-start mt-12">
-          <Link href="/blog"> ← Back to blog</Link>
-        </div>
-      </article>
-    </LayoutApp>
-  );
+  return <PostPageComponent {...result} />;
 }

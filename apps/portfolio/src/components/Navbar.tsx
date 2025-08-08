@@ -1,10 +1,3 @@
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from '@/components/shadcn/ui/navigation-menu';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import ColorModeToggle from './ColorModeToggle';
 
