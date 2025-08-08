@@ -32,6 +32,7 @@ export default defineConfig({
         name: 'post',
         label: 'Posts',
         path: 'content/posts',
+        format: 'md',
         fields: [
           {
             type: 'string',
@@ -78,6 +79,10 @@ export default defineConfig({
         name: 'page',
         label: 'Pages',
         path: 'content/pages',
+        format: 'md',
+        ui: {
+          router: ({ document }) => `/${document._sys.filename}`,
+        },
         fields: [
           {
             type: 'string',
