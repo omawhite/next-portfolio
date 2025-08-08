@@ -7,6 +7,7 @@ import Link from 'next/link';
 import TypographyH1 from '@/components/shadcn/ui/TypographyH1';
 import TypographyMuted from '@/components/shadcn/ui/TypographyMuted';
 import { cn } from '@/lib/utils';
+import {client} from 'tina/__generated__/client'
 
 interface PostPageProps {
   params: Promise<{
@@ -25,7 +26,8 @@ export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
   const { id } = await params;
-  const postData = await getPostData(id);
+  const post = await client.queries.post({relativePath: `${id}.md`})
+  const postData = post.data.post;
 
   return {
     title: postData.title,
