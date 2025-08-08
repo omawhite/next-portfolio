@@ -81,7 +81,12 @@ export default defineConfig({
         path: 'content/pages',
         format: 'md',
         ui: {
-          router: ({ document }) => `/${document._sys.filename}`,
+          router: ({ document }) => {
+            if (document._sys.filename === 'home') {
+              return '/';
+            }
+            return `/${document._sys.filename}`;
+          },
         },
         fields: [
           {
@@ -89,6 +94,30 @@ export default defineConfig({
             name: 'title',
             label: 'Title',
             required: true,
+          },
+          {
+            type: 'string',
+            name: 'description',
+            label: 'Description',
+          },
+          {
+            type: 'object',
+            name: 'blocks',
+            label: 'Blocks',
+            list: true,
+            templates: [
+              {
+                name: 'bio',
+                label: 'Bio',
+                fields: [
+                  {
+                    type: 'rich-text',
+                    name: 'text',
+                    label: 'Text',
+                  },
+                ],
+              },
+            ],
           },
           {
             type: 'rich-text',
