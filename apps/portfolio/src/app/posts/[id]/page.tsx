@@ -14,6 +14,8 @@ interface PostPageProps {
   }>;
 }
 
+export const revalidate = 3600 // invalidate every hour
+
 export async function generateStaticParams() {
   const postsResponse = await client.queries.postConnection();
   const edges = postsResponse.data.postConnection.edges || [];
