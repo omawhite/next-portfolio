@@ -66,6 +66,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
+      TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
