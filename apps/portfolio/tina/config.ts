@@ -59,7 +59,7 @@ export default defineConfig({
           },
           {
             type: 'image',
-            name: 'featuredimage',
+            name: 'featuredImage',
             label: 'Featured Image',
           },
           {
