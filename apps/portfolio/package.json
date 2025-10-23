@@ -62,7 +62,7 @@
     "@types/node": "^20.19.9",
     "@types/react": "^18.2.15",
     "autoprefixer": "^10.4.14",
-    "chromatic": "^6.19.9",
+    "chromatic": "^13.3.1",
     "eslint-config-next": "15.4.4",
     "eslint-config-prettier": "^8.3.0",
     "js-yaml-loader": "^1.2.2",
