@@ -67,7 +67,7 @@
     "eslint-config-prettier": "^8.3.0",
     "js-yaml-loader": "^1.2.2",
     "prettier": "3.6.2",
-    "storybook": "^8.6.12",
+    "storybook": "^9.1.13",
     "storybook-css-modules-preset": "^1.1.1",
     "typescript": "^5.1.6"
   },
