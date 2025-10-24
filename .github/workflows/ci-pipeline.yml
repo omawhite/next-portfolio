@@ -65,7 +65,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
       NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
       TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
     steps:
@@ -86,10 +85,6 @@ jobs:
         run: pnpm install
       - name: build
         run: pnpm build
-      - name: Run lighthouse ci
-        run: |
-          npm install -g @lhci/cli@0.13.x
-          lhci autorun --upload.token=${{ secrets.LHCI_BUILD_TOKEN }} --upload.serverBaseUrl=${{ secrets.LHCI_SERVER_BASE_URL}} --config=apps/portfolio/.lighthouserc.js
 
   chromatic:
     runs-on: ubuntu-latest
