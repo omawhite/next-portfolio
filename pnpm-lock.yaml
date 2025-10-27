@@ -84,8 +84,8 @@ importers:
         specifier: ^13.0.0
         version: 13.0.0
       remark-html:
-        specifier: ^13.0.2
-        version: 13.0.2
+        specifier: ^16.0.1
+        version: 16.0.1
       tailwind-merge:
         specifier: ^3.2.0
         version: 3.3.1
@@ -143,7 +143,7 @@ importers:
         version: 10.4.21(postcss@8.5.6)
       chromatic:
         specifier: ^13.3.1
-        version: 13.3.1
+        version: 13.3.2
       eslint-config-next:
         specifier: 15.4.4
         version: 15.4.4(eslint@8.57.1)(typescript@5.9.3)
@@ -1821,8 +1821,8 @@ packages:
   '@lezer/common@1.3.0':
     resolution: {integrity: sha512-L9X8uHCYU310o99L3/MpJKYxPzXPOS7S0NmBaM7UO/x2Kb2WbmMLSkfvdr1KxRIFYOpbY0Jhn7CfLSUDzL8arQ==}
 
-  '@lezer/highlight@1.2.2':
-    resolution: {integrity: sha512-z8TQwaBXXQIvG6i2g3e9cgMwUUXu9Ib7jo2qRRggdhwKpM56Dw3PM3wmexn+EGaaOZ7az0K7sjc3/gcGW7sz7A==}
+  '@lezer/highlight@1.2.3':
+    resolution: {integrity: sha512-qXdH7UqTvGfdVBINrgKhDsVTJTxactNNxLk7+UMwZhU13lMHaOBlJe9Vqp907ya56Y3+ed2tlqzys7jDkTmW0g==}
 
   '@lezer/lr@1.4.2':
     resolution: {integrity: sha512-pu0K1jCIdnQ12aWNaAVU5bzi7Bd1w54J3ECgANPmYLtQKP0HBj2cE/5coBD66MT10xbtIuUr7tg0Shbsvk0mDA==}
@@ -4534,9 +4534,6 @@ packages:
     resolution: {integrity: sha512-K7Qy8O9p76sL3/3m7/zLKbRkyOlSZAgzEaLhyj2mXS8PsCud2Eo4hAb8aLtZqHh0QGqLcb9dlJSu6lHRVENm1w==}
     engines: {node: '>=6'}
 
-  ccount@1.1.0:
-    resolution: {integrity: sha512-vlNK021QdI7PNeiUh/lKkC/mNHHfV0m/Ad5JoI0TYtlBnJAslM/JIkm/tGC88bkLIwO6OQ5uV6ztS6kVAtCDlg==}
-
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
 
@@ -4561,9 +4558,6 @@ packages:
 
   change-case@4.1.2:
     resolution: {integrity: sha512-bSxY2ws9OtviILG1EiY5K7NNxkqg/JnRnFxLtKQ96JaviiIxi7djMrSd0ECT9AC+lttClmYwKw53BWpOMblo7A==}
-
-  character-entities-html4@1.1.4:
-    resolution: {integrity: sha512-HRcDxZuZqMx3/a+qrzxdBKBPUpxWEq9xw2OPZ3a/174ihfrQKVsFhqtthBInFy1zZ9GgZyFXOatNujm8M+El3g==}
 
   character-entities-html4@2.1.0:
     resolution: {integrity: sha512-1v7fgQRj6hnSwFpq1Eu0ynr/CDEw0rXo2B61qXrLNdHZmPKgb7fqS1a2JwF0rISo9q77jDI8VMEHoApn8qDoZA==}
@@ -4612,8 +4606,8 @@ packages:
       '@chromatic-com/playwright':
         optional: true
 
-  chromatic@13.3.1:
-    resolution: {integrity: sha512-qJ/el70Wo7jFgiXPpuukqxCEc7IKiH/e8MjTzIF9uKw+3XZ6GghOTTLC7lGfeZtosiQBMkRlYet77tC4KKHUng==}
+  chromatic@13.3.2:
+    resolution: {integrity: sha512-hBxbElFH8twWq7GHP52twqmduBkzB7EQZPIrzZA7iD9ZQ2P0Cbo1CDyeVsLz7FdywAKO86YvuXGxaOf7Z0n5eA==}
     hasBin: true
     peerDependencies:
       '@chromatic-com/cypress': ^0.*.* || ^1.0.0
@@ -4707,9 +4701,6 @@ packages:
   combined-stream@1.0.8:
     resolution: {integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==}
     engines: {node: '>= 0.8'}
-
-  comma-separated-tokens@1.0.8:
-    resolution: {integrity: sha512-GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==}
 
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
@@ -5945,20 +5936,11 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
     engines: {node: '>= 0.4'}
 
-  hast-util-is-element@1.1.0:
-    resolution: {integrity: sha512-oUmNua0bFbdrD/ELDSSEadRVtWZOf3iF6Lbv81naqsIV99RnSCieTbWuWCY8BAeEfKJTKl0gRdokv+dELutHGQ==}
-
-  hast-util-sanitize@3.0.2:
-    resolution: {integrity: sha512-+2I0x2ZCAyiZOO/sb4yNLFmdwPBnyJ4PBkVTUMKMqBwYNA+lXSgOmoRXlJFazoyid9QPogRRKgKhVEodv181sA==}
-
-  hast-util-to-html@7.1.3:
-    resolution: {integrity: sha512-yk2+1p3EJTEE9ZEUkgHsUSVhIpCsL/bvT8E5GzmWc+N1Po5gBw+0F8bo7dpxXR0nu0bQVxVZGX2lBGF21CmeDw==}
+  hast-util-sanitize@5.0.2:
+    resolution: {integrity: sha512-3yTWghByc50aGS7JlGhk61SPenfE/p1oaFeNwkOOyrscaOkMGrcW9+Cy/QAIOBpZxP1yqDIzFMR0+Np0i0+usg==}
 
   hast-util-to-html@9.0.5:
     resolution: {integrity: sha512-OguPdidb+fbHQSU4Q4ZiLKnzWo8Wwsf5bZfbvu7//a9oTYoqD/fWpe96NuHkoS9h0ccGOTe0C4NGXdtS0iObOw==}
-
-  hast-util-whitespace@1.0.4:
-    resolution: {integrity: sha512-I5GTdSfhYfAPNztx2xJRQpG8cuDSNt599/7YUn7Gx/WxNMsG+a835k97TDkFgk123cwjfwINaZknkKkphx/f2A==}
 
   hast-util-whitespace@3.0.0:
     resolution: {integrity: sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==}
@@ -5989,9 +5971,6 @@ packages:
     resolution: {integrity: sha512-YXxSlJBZTP7RS3tWnQw74ooKa6L9b9i9QYXY21eUEvhZ3u9XLfv6OnFsQq6RxkhHygsaUMvYsZRV5rU/OVNZxw==}
     engines: {node: '>=12'}
     hasBin: true
-
-  html-void-elements@1.0.5:
-    resolution: {integrity: sha512-uE/TxKuyNIcx44cIWnjr/rfIATDH7ZaOMmstu0CwhFG1Dunhlp4OC6/NMbhiwoq5BpW0ubi303qnEk/PZj614w==}
 
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
@@ -6797,9 +6776,6 @@ packages:
   mdast-util-compact@4.1.1:
     resolution: {integrity: sha512-h/UFPIkf4ZlJw50k9UC+CkY+/urhFHZB25GXGh0f+kbqSulzZMSEGWeFjAe2jEQsFu9bSjf0s/TdZXsjvtmxIQ==}
 
-  mdast-util-definitions@4.0.0:
-    resolution: {integrity: sha512-k8AJ6aNnUkB7IE+5azR9h81O5EQ/cTDXtWdMq9Kk5KcEW/8ritU5CeLg/9HhOC++nALHBlaogJ5jz0Ybk3kPMQ==}
-
   mdast-util-directive@2.2.4:
     resolution: {integrity: sha512-sK3ojFP+jpj1n7Zo5ZKvoxP1MvLyzVG63+gm40Z/qI00avzdPCYxt7RBMgofwAva9gBjbDBWVRB/i+UD+fUCzQ==}
 
@@ -6847,9 +6823,6 @@ packages:
 
   mdast-util-phrasing@3.0.1:
     resolution: {integrity: sha512-WmI1gTXUBJo4/ZmSk79Wcb2HcjPJBzM1nlI/OUWA8yk2X9ik3ffNbBGsU+09BFmXaL1IBb9fiuvq6/KMiNycSg==}
-
-  mdast-util-to-hast@10.2.0:
-    resolution: {integrity: sha512-JoPBfJ3gBnHZ18icCwHR50orC9kNH81tiR1gs01D8Q5YpV6adHNO9nKNuFBCJQ941/32PT1a63UF/DitmS3amQ==}
 
   mdast-util-to-hast@13.2.0:
     resolution: {integrity: sha512-QGYKEuUsYT9ykKBCMOEDLsU5JRObWQusAolFMeko/tYPufNkRffBAQjIE+99jbA87xv6FgmjLtwjh9wBWajwAA==}
@@ -7682,9 +7655,6 @@ packages:
   property-expr@2.0.6:
     resolution: {integrity: sha512-SVtmxhRE/CGkn3eZY1T6pC8Nln6Fr/lu1mKSgRud0eC73whjGfoAogbn78LkD8aFL0zz3bAFerKSnOl7NlErBA==}
 
-  property-information@5.6.0:
-    resolution: {integrity: sha512-YUHSPk+A30YPv+0Qf8i9Mbfe/C0hdPXk1s1jPVToV8pk8BQtpw10ct89Eo7OWkutrwqvT0eicAxlOg3dOAu8JA==}
-
   property-information@7.1.0:
     resolution: {integrity: sha512-TwEZ+X+yCJmYfL7TPUOcvBZ4QfoT5YenQiJuX//0th53DE6w0xxLEtfK3iyryQFddXuvkIk51EEgrJQ0WJkOmQ==}
 
@@ -8020,8 +7990,8 @@ packages:
   remark-gfm@2.0.0:
     resolution: {integrity: sha512-waIv4Tjcd2CTUDxKRYzuPyIHw1FoX4H2GjXAzXV9PxQWb+dU4fJivd/FZ+nxyzPARrqTjMIkwIwPoWNbpBhjcQ==}
 
-  remark-html@13.0.2:
-    resolution: {integrity: sha512-LhSRQ+3RKdBqB/RGesFWkNNfkGqprDUCwjq54SylfFeNyZby5kqOG8Dn/vYsRoM8htab6EWxFXCY6XIZvMoRiQ==}
+  remark-html@16.0.1:
+    resolution: {integrity: sha512-B9JqA5i0qZe0Nsf49q3OXyGvyXuZFDzAP2iOFLEumymuYJITVpiH1IgsTEwTpdptDmZlMDMWeDmSawdaJIGCXQ==}
 
   remark-mdx@2.3.0:
     resolution: {integrity: sha512-g53hMkpM0I98MU266IzDFMrTD980gNF3BJnkyFcmN+dD873mQeD5rdMO3Y2X+x8umQfbSE0PcoEDl7ledSA+2g==}
@@ -8383,9 +8353,6 @@ packages:
     resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
     engines: {node: '>= 8'}
 
-  space-separated-tokens@1.1.5:
-    resolution: {integrity: sha512-q/JSVd1Lptzhf5bkYm4ob4iWPjx0KiRe3sRFBNrVqbJkFaBm5vbbowy1mymoPNLRa52+oadOhJ+K49wsSeSjTA==}
-
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
 
@@ -8495,11 +8462,11 @@ packages:
   string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
 
-  stringify-entities@3.1.0:
-    resolution: {integrity: sha512-3FP+jGMmMV/ffZs86MoghGqAoqXAdxLrJP4GUdrDN1aIScYih5tuIO3eF4To5AJZ79KDZ8Fpdy7QJnK8SsL1Vg==}
-
   stringify-entities@4.0.3:
     resolution: {integrity: sha512-BP9nNHMhhfcMbiuQKCqMjhDP5yBCAxsPu4pHFFzJ6Alo9dZgY4VLDPutXqIjpRiMoKdp7Av85Gr73Q5uH9k7+g==}
+
+  stringify-entities@4.0.4:
+    resolution: {integrity: sha512-IwfBptatlO+QCJUo19AqvrPNqlVMpW9YEL2LIVY+Rpv2qsjCGxaDLNRgeGsQWJhfItebuJhsGSLjaBbNSQ+ieg==}
 
   strip-ansi@6.0.1:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
@@ -8945,29 +8912,20 @@ packages:
   unified@10.1.2:
     resolution: {integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==}
 
+  unified@11.0.5:
+    resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
+
   unified@9.2.2:
     resolution: {integrity: sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==}
-
-  unist-builder@2.0.3:
-    resolution: {integrity: sha512-f98yt5pnlMWlzP539tPc4grGMsFaQQlP/vM396b00jngsiINumNmsY8rkXjfoi1c6QaM8nQ3vaGDuoKWbe/1Uw==}
-
-  unist-util-generated@1.1.6:
-    resolution: {integrity: sha512-cln2Mm1/CZzN5ttGK7vkoGw+RZ8VcUH6BtGbq98DDtRGquAAOXig1mrBQYelOwMXYS8rK+vZDyyojSjp7JX+Lg==}
-
-  unist-util-is@4.1.0:
-    resolution: {integrity: sha512-ZOQSsnce92GrxSqlnEEseX0gi7GH9zTJZ0p9dtu87WRb/37mMPO2Ilx1s/t9vBHrFhbgweUwb+t7cIn5dxPhZg==}
 
   unist-util-is@5.2.1:
     resolution: {integrity: sha512-u9njyyfEh43npf1M+yGKDGVPbY/JWEemg5nH05ncKPfi+kBbKBJoTdsogMu33uhytuLlv9y0O7GH7fEdwLdLQw==}
 
-  unist-util-is@6.0.0:
-    resolution: {integrity: sha512-2qCTHimwdxLfz+YzdGfkqNlH0tLi9xjTnHddPmJwtIG9MGsdbutfTc4P+haPD7l7Cjxf/WZj+we5qfVPvvxfYw==}
+  unist-util-is@6.0.1:
+    resolution: {integrity: sha512-LsiILbtBETkDz8I9p1dQ0uyRUWuaQzd/cuEeS1hoRSyW5E5XGmTzlwY1OrNzzakGowI9Dr/I8HVaw4hTtnxy8g==}
 
   unist-util-position-from-estree@1.1.2:
     resolution: {integrity: sha512-poZa0eXpS+/XpoQwGwl79UUdea4ol2ZuCYguVaJS4qzIOMDzbqz8a3erUCOmubSZkaOuGamb3tX790iwOIROww==}
-
-  unist-util-position@3.1.0:
-    resolution: {integrity: sha512-w+PkwCbYSFw8vpgWD0v7zRCl1FpY3fjDSQ3/N/wNd9Ffa4gPi8+4keqt99N3XW6F99t/mUzp2xAhNmfKWp95QA==}
 
   unist-util-position@5.0.0:
     resolution: {integrity: sha512-fucsC7HjXvkB5R3kTCO7kUjRdrS0BJt3M/FPxmHMBOm8JQi2BsHAHFsy27E0EolP8rp0NzXsJ+jNPyDWvOJZPA==}
@@ -8987,17 +8945,11 @@ packages:
   unist-util-stringify-position@4.0.0:
     resolution: {integrity: sha512-0ASV06AAoKCDkS2+xw5RXJywruurpbC4JZSm7nr7MOt1ojAzvyyaO+UxZf18j8FCF6kmzCZKcAgN/yu2gm2XgQ==}
 
-  unist-util-visit-parents@3.1.1:
-    resolution: {integrity: sha512-1KROIZWo6bcMrZEwiH2UrXDyalAa0uqzWCxCJj6lPOvTve2WkfgCytoDTPaMnodXh1WrXOq0haVYHj99ynJlsg==}
-
   unist-util-visit-parents@5.1.3:
     resolution: {integrity: sha512-x6+y8g7wWMyQhL1iZfhIPhDAs7Xwbn9nRosDXl7qoPTSCy0yNxnKc+hWokFifWQIDGi154rdUqKvbCa4+1kLhg==}
 
-  unist-util-visit-parents@6.0.1:
-    resolution: {integrity: sha512-L/PqWzfTP9lzzEa6CKs0k2nARxTdZduw3zyh8d2NVBnsyvHjSX4TWse388YrrQKbvI8w20fGjGlhgT96WwKykw==}
-
-  unist-util-visit@2.0.3:
-    resolution: {integrity: sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==}
+  unist-util-visit-parents@6.0.2:
+    resolution: {integrity: sha512-goh1s1TBrqSqukSc8wrjwWhL0hiJxgA8m4kFxGlQ+8FYQ3C/m11FcTs4YYem7V664AhHVvgoQLk890Ssdsr2IQ==}
 
   unist-util-visit@4.1.2:
     resolution: {integrity: sha512-MSd8OUGISqHdVvfY9TPhyK2VdUrPgxkUtWSuMHF6XAAFuL4LokseigBnZtPnJMu+FbynTkFNnFlyjxpVKujMRg==}
@@ -10203,7 +10155,7 @@ snapshots:
       '@codemirror/state': 6.5.2
       '@codemirror/view': 6.38.6
       '@lezer/common': 1.3.0
-      '@lezer/highlight': 1.2.2
+      '@lezer/highlight': 1.2.3
       '@lezer/lr': 1.4.2
       style-mod: 4.1.3
 
@@ -11059,7 +11011,7 @@ snapshots:
 
   '@lezer/common@1.3.0': {}
 
-  '@lezer/highlight@1.2.2':
+  '@lezer/highlight@1.2.3':
     dependencies:
       '@lezer/common': 1.3.0
 
@@ -13223,7 +13175,7 @@ snapshots:
 
   '@types/hast@3.0.4':
     dependencies:
-      '@types/unist': 2.0.11
+      '@types/unist': 3.0.3
 
   '@types/hoist-non-react-statics@3.3.7(@types/react@18.3.26)':
     dependencies:
@@ -14411,8 +14363,6 @@ snapshots:
 
   catering@2.1.1: {}
 
-  ccount@1.1.0: {}
-
   ccount@2.0.1: {}
 
   chai@5.2.0:
@@ -14467,8 +14417,6 @@ snapshots:
       snake-case: 3.0.4
       tslib: 2.8.1
 
-  character-entities-html4@1.1.4: {}
-
   character-entities-html4@2.1.0: {}
 
   character-entities-legacy@1.1.4: {}
@@ -14503,7 +14451,7 @@ snapshots:
 
   chromatic@11.29.0: {}
 
-  chromatic@13.3.1: {}
+  chromatic@13.3.2: {}
 
   chrome-trace-event@1.0.4: {}
 
@@ -14586,8 +14534,6 @@ snapshots:
   combined-stream@1.0.8:
     dependencies:
       delayed-stream: 1.0.0
-
-  comma-separated-tokens@1.0.8: {}
 
   comma-separated-tokens@2.0.3: {}
 
@@ -16186,24 +16132,11 @@ snapshots:
     dependencies:
       function-bind: 1.1.2
 
-  hast-util-is-element@1.1.0: {}
-
-  hast-util-sanitize@3.0.2:
+  hast-util-sanitize@5.0.2:
     dependencies:
-      xtend: 4.0.2
-
-  hast-util-to-html@7.1.3:
-    dependencies:
-      ccount: 1.1.0
-      comma-separated-tokens: 1.0.8
-      hast-util-is-element: 1.1.0
-      hast-util-whitespace: 1.0.4
-      html-void-elements: 1.0.5
-      property-information: 5.6.0
-      space-separated-tokens: 1.1.5
-      stringify-entities: 3.1.0
-      unist-util-is: 4.1.0
-      xtend: 4.0.2
+      '@types/hast': 3.0.4
+      '@ungap/structured-clone': 1.3.0
+      unist-util-position: 5.0.0
 
   hast-util-to-html@9.0.5:
     dependencies:
@@ -16216,10 +16149,8 @@ snapshots:
       mdast-util-to-hast: 13.2.0
       property-information: 7.1.0
       space-separated-tokens: 2.0.2
-      stringify-entities: 4.0.3
+      stringify-entities: 4.0.4
       zwitch: 2.0.4
-
-  hast-util-whitespace@1.0.4: {}
 
   hast-util-whitespace@3.0.0:
     dependencies:
@@ -16259,8 +16190,6 @@ snapshots:
       param-case: 3.0.4
       relateurl: 0.2.7
       terser: 5.43.1
-
-  html-void-elements@1.0.5: {}
 
   html-void-elements@3.0.0: {}
 
@@ -17002,10 +16931,6 @@ snapshots:
       '@types/mdast': 3.0.15
       unist-util-visit: 4.1.2
 
-  mdast-util-definitions@4.0.0:
-    dependencies:
-      unist-util-visit: 2.0.3
-
   mdast-util-directive@2.2.4:
     dependencies:
       '@types/mdast': 3.0.15
@@ -17013,7 +16938,7 @@ snapshots:
       mdast-util-from-markdown: 1.3.0
       mdast-util-to-markdown: 1.5.0
       parse-entities: 4.0.1
-      stringify-entities: 4.0.3
+      stringify-entities: 4.0.4
       unist-util-visit-parents: 5.1.3
     transitivePeerDependencies:
       - supports-color
@@ -17125,7 +17050,7 @@ snapshots:
       mdast-util-from-markdown: 1.3.0
       mdast-util-to-markdown: 1.5.0
       parse-entities: 4.0.1
-      stringify-entities: 4.0.3
+      stringify-entities: 4.0.4
       unist-util-remove-position: 4.0.2
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
@@ -17156,17 +17081,6 @@ snapshots:
     dependencies:
       '@types/mdast': 3.0.15
       unist-util-is: 5.2.1
-
-  mdast-util-to-hast@10.2.0:
-    dependencies:
-      '@types/mdast': 3.0.15
-      '@types/unist': 2.0.11
-      mdast-util-definitions: 4.0.0
-      mdurl: 1.0.1
-      unist-builder: 2.0.3
-      unist-util-generated: 1.1.6
-      unist-util-position: 3.1.0
-      unist-util-visit: 2.0.3
 
   mdast-util-to-hast@13.2.0:
     dependencies:
@@ -18196,10 +18110,6 @@ snapshots:
 
   property-expr@2.0.6: {}
 
-  property-information@5.6.0:
-    dependencies:
-      xtend: 4.0.2
-
   property-information@7.1.0: {}
 
   protocol-buffers-encodings@1.2.0:
@@ -18614,11 +18524,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  remark-html@13.0.2:
+  remark-html@16.0.1:
     dependencies:
-      hast-util-sanitize: 3.0.2
-      hast-util-to-html: 7.1.3
-      mdast-util-to-hast: 10.2.0
+      '@types/mdast': 4.0.4
+      hast-util-sanitize: 5.0.2
+      hast-util-to-html: 9.0.5
+      mdast-util-to-hast: 13.2.0
+      unified: 11.0.5
 
   remark-mdx@2.3.0:
     dependencies:
@@ -19093,8 +19005,6 @@ snapshots:
 
   source-map@0.7.4: {}
 
-  space-separated-tokens@1.1.5: {}
-
   space-separated-tokens@2.0.2: {}
 
   sponge-case@1.0.1:
@@ -19246,13 +19156,12 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  stringify-entities@3.1.0:
-    dependencies:
-      character-entities-html4: 1.1.4
-      character-entities-legacy: 1.1.4
-      xtend: 4.0.2
-
   stringify-entities@4.0.3:
+    dependencies:
+      character-entities-html4: 2.1.0
+      character-entities-legacy: 3.0.0
+
+  stringify-entities@4.0.4:
     dependencies:
       character-entities-html4: 2.1.0
       character-entities-legacy: 3.0.0
@@ -19762,6 +19671,16 @@ snapshots:
       trough: 2.2.0
       vfile: 5.3.7
 
+  unified@11.0.5:
+    dependencies:
+      '@types/unist': 3.0.3
+      bail: 2.0.2
+      devlop: 1.1.0
+      extend: 3.0.2
+      is-plain-obj: 4.1.0
+      trough: 2.2.0
+      vfile: 6.0.3
+
   unified@9.2.2:
     dependencies:
       '@types/unist': 2.0.11
@@ -19772,25 +19691,17 @@ snapshots:
       trough: 1.0.5
       vfile: 4.2.1
 
-  unist-builder@2.0.3: {}
-
-  unist-util-generated@1.1.6: {}
-
-  unist-util-is@4.1.0: {}
-
   unist-util-is@5.2.1:
     dependencies:
       '@types/unist': 2.0.11
 
-  unist-util-is@6.0.0:
+  unist-util-is@6.0.1:
     dependencies:
       '@types/unist': 3.0.3
 
   unist-util-position-from-estree@1.1.2:
     dependencies:
       '@types/unist': 2.0.11
-
-  unist-util-position@3.1.0: {}
 
   unist-util-position@5.0.0:
     dependencies:
@@ -19819,26 +19730,15 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  unist-util-visit-parents@3.1.1:
-    dependencies:
-      '@types/unist': 2.0.11
-      unist-util-is: 4.1.0
-
   unist-util-visit-parents@5.1.3:
     dependencies:
       '@types/unist': 2.0.11
       unist-util-is: 5.2.1
 
-  unist-util-visit-parents@6.0.1:
+  unist-util-visit-parents@6.0.2:
     dependencies:
       '@types/unist': 3.0.3
-      unist-util-is: 6.0.0
-
-  unist-util-visit@2.0.3:
-    dependencies:
-      '@types/unist': 2.0.11
-      unist-util-is: 4.1.0
-      unist-util-visit-parents: 3.1.1
+      unist-util-is: 6.0.1
 
   unist-util-visit@4.1.2:
     dependencies:
@@ -19849,8 +19749,8 @@ snapshots:
   unist-util-visit@5.0.0:
     dependencies:
       '@types/unist': 3.0.3
-      unist-util-is: 6.0.0
-      unist-util-visit-parents: 6.0.1
+      unist-util-is: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   universalify@0.1.2: {}
 
